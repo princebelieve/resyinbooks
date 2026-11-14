@@ -13,3 +13,5 @@ The finished, usable editions are kept in this folder. Source files, assembly ma
 | [A5 full-wrap cover proof](Givers_and_Takers_in_Africa_Cover_Spread_A5_167p_Cream_Proof.pdf) | Rebuilt from the supplied artwork and sized for the 167-page interior under a cream-paper assumption. Confirm the printer's paper and template before printing. |
 
 The print ISBN also appears as a barcode on the supplied back cover. The digital PDF and EPUB have the copyright notice but omit the print ISBN because no separate digital-edition ISBN was supplied. Confirm the print ISBN's assignment before publication.
+
+The table of contents is in the front matter. The subject index is at the end of the book, after the conclusion, bibliography and other supplied back matter.

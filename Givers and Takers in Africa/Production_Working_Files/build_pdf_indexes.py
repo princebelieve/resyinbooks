@@ -178,55 +178,45 @@ def build_index(rows,w,h,index_page_num):
 
 def process(filename,digital=False):
     src=PROD/filename; doc=fitz.open(src); chapters=book.collect_chapters(); starts,spans,chapter_pages,back=section_pages(doc,chapters); rows,evidence,section_text=make_rows(chapters,spans)
-    index,loc_links,anchors=build_index(rows,doc[0].rect.width,doc[0].rect.height,back+1)
-    count=len(index); out=fitz.open(); out.insert_pdf(doc,to_page=back-1); index_start=len(out); out.insert_pdf(index); tail=index_start+count; out.insert_pdf(doc,from_page=back)
+    index,loc_links,anchors=build_index(rows,doc[0].rect.width,doc[0].rect.height,len(doc)+1)
+    # A subject index belongs after all supplied back matter, at the end of the book.
+    count=len(index); out=fitz.open(); out.insert_pdf(doc); index_start=len(out); out.insert_pdf(index); tail=index_start+count
     for local,rect,dest in loc_links:
         out[index_start+local].insert_link({'kind':fitz.LINK_GOTO,'from':rect,'page':dest,'to':fitz.Point(0,0)})
     # Restore all original internal links after the page insertion and keep destinations exact.
     for old_i,page in enumerate(doc):
-        new_i=old_i if old_i<back else old_i+count
+        new_i=old_i
         for link in page.get_links():
             if link.get('kind') not in (fitz.LINK_GOTO,fitz.LINK_NAMED) or link.get('page',-1)<0: continue
-            dest=link['page']; dest=dest if dest<back else dest+count
+            dest=link['page']
             out[new_i].insert_link({'kind':fitz.LINK_GOTO,'from':link['from'],'page':dest,'to':link.get('to',fitz.Point(0,0))})
     index_dest=index_start
     # Digital reading controls and selective in-text links to substantively relevant sections.
     related_count=0; return_count=0
     if digital:
         # Targets point to the start of the chosen section in the final edition.
-        topic_dest={term:(starts[sid][0]+(count if starts[sid][0]>=back else 0),fitz.Point(starts[sid][1].x0,starts[sid][1].y0)) for term,sid in RELATED.items()}
+        topic_dest={term:(starts[sid][0],fitz.Point(starts[sid][1].x0,starts[sid][1].y0)) for term,sid in RELATED.items()}
         for n,cp in chapter_pages.items():
             next_cp=chapter_pages.get(n+1,back)
             for term,(dest,point) in topic_dest.items():
                 if cp<=dest<next_cp: continue
                 used=False
                 for i in range(cp,next_cp):
-                    page=out[i+(count if i>=back else 0)]
+                    page=out[i]
                     rects=page.search_for(term)
                     rect=next((r for r in rects if r.y0>55 and r.y1<page.rect.height-42),None)
                     if rect:
                         page.insert_link({'kind':fitz.LINK_GOTO,'from':rect,'page':dest,'to':point}); related_count+=1; used=True; break
                 if used: continue
             for old in range(cp,next_cp):
-                p=out[old+(count if old>=back else 0)]
+                p=out[old]
                 r=fitz.Rect(p.rect.width-118,p.rect.height-27,p.rect.width-53,p.rect.height-14)
                 p.insert_text((r.x0,r.y0+9),'Subject index',fontname='tiro',fontsize=7.5,color=(.1,.35,.45))
                 p.insert_link({'kind':fitz.LINK_GOTO,'from':r,'page':index_dest,'to':fitz.Point(0,0)}); return_count+=1
     # Index page locators are page-numbered for this specific output.
-    # Recompute displayed page labels because insertion shifts all back-matter pages.
-    # Locator pages only point to chapters, which precede the index and are unchanged.
-    # Ensure print folios after the insertion follow physical PDF page order.
-    for i in range(tail,len(out)):
-        p=out[i]
-        for block in p.get_text('dict')['blocks']:
-            for line in block.get('lines',[]):
-                s=''.join(span['text'] for span in line['spans']).strip()
-                if s.isdigit() and line['bbox'][1]>p.rect.height-60:
-                    p.add_redact_annot(fitz.Rect(line['bbox']),fill=(1,1,1)); p.apply_redactions(images=0,graphics=0)
-                    p.insert_text((p.rect.width/2-3,p.rect.height-33),str(i+1),fontname='tiro',fontsize=8,color=(.09,.25,.20)); break
     toc=[[1,book.TITLE,1],[1,'Contents',2]]
     for n,_,title,_ in chapters: toc.append([1,f'Chapter {n}: {title.title()}',chapter_pages[n]+1])
-    toc.append([1,'Subject Index',index_start+1]); toc.append([1,'Back Matter',tail+1]); out.set_toc(toc)
+    toc.append([1,'Back Matter',back+1]); toc.append([1,'Subject Index',index_start+1]); out.set_toc(toc)
     out.set_metadata({'title':book.TITLE,'author':book.AUTHOR,'subject':'Indexed edition; internal chapter and topic navigation'})
     target=PROD/(filename.replace('.pdf','_Indexed.pdf')); out.save(target,garbage=4,deflate=True)
     # Reopen and confirm every index locator and original chapter link resolves inside this edition.
@@ -236,20 +226,20 @@ def process(filename,digital=False):
             if link.get('kind')==fitz.LINK_GOTO: link_records.append(link)
     if any(l.get('page',-1)<0 or l.get('page',len(saved))>=len(saved) for p in saved for l in p.get_links()): raise ValueError('Out-of-range PDF link destination')
     if len(saved[index_start].get_text().strip())<100: raise ValueError('Subject index output is empty')
-    for old_page in range(back):
+    for old_page in range(len(doc)):
         actual=saved[old_page].get_text()
         if digital: actual=actual.replace('Subject index\n','')
         if actual!=doc[old_page].get_text(): raise ValueError(f'Manuscript text changed during indexing on page {old_page+1}')
     for old_page,page in enumerate(doc):
-        new_page=old_page if old_page<back else old_page+count
+        new_page=old_page
         for link in page.get_links():
             if link.get('kind') not in (fitz.LINK_GOTO,fitz.LINK_NAMED) or link.get('page',-1)<0: continue
-            destination=link['page']+(count if link['page']>=back else 0)
+            destination=link['page']
             rect=link['from']
             if not any(l.get('kind')==fitz.LINK_GOTO and l.get('page')==destination and abs(l['from'].x0-rect.x0)<.1 and abs(l['from'].y0-rect.y0)<.1 for l in saved[new_page].get_links()):
                 raise ValueError(f'An original contents/navigation link was not retained: source page {old_page+1}')
     saved[index_start].get_pixmap(matrix=fitz.Matrix(1.5,1.5)).save(PRE/(target.stem+'_Index.png'))
-    saved[tail].get_pixmap(matrix=fitz.Matrix(1.2,1.2)).save(PRE/(target.stem+'_Backmatter.png'))
+    saved[back].get_pixmap(matrix=fitz.Matrix(1.2,1.2)).save(PRE/(target.stem+'_Backmatter.png'))
     return saved,target,{'pages':len(saved),'index_pages':count,'entries':len(evidence),'index_locator_links':len(link_records),'related_links':related_count,'return_links':return_count,'evidence':evidence}
 
 def main():

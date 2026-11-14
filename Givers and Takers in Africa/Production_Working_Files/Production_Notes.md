@@ -13,7 +13,7 @@ This production follows the workflow and retained tools in `Serenity and Tranqui
 - Indexed DOCX copy: 170 section-level XE markers and a native INDEX field; the underlying 6 × 9 source master remains as a separate file.
 - The indexed PDFs contain the same 49-entry section-based index. `Production/Subject_Index_Audit.json` maps its entries to the manuscript sections and source-edition locators.
 
-The subject index is an editorial first pass that should be reviewed for preferred terminology and scope. Its PDF page references are generated separately for each trim/layout; the Word index field must be refreshed in Word to compute its own references.
+The subject index is an editorial first pass that should be reviewed for preferred terminology and scope. It follows all supplied back matter at the end of each PDF and EPUB. Its PDF page references are generated separately for each trim/layout; the Word index field must be refreshed in Word to compute its own references.
 
 ## Source and cover handling
 
