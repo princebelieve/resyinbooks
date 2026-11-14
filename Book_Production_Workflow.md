@@ -4,8 +4,8 @@ This guide records how *Serenity and Tranquillity* and *Givers and Takers in Afr
 
 ## Current project folders
 
-- `Serenity and Tranquillity` keeps its current editions at the folder top level. Its older editions and working inputs are retained under `Archive_Obsolete` and the production/support folders.
-- `Givers and Takers in Africa` now follows that pattern. Its deliverables are at the folder top level; source files, intermediate outputs, scripts, audits and previews are retained in `Production_Working_Files`.
+- Both project folders now contain only current deliverables and `CURRENT_FILES.md`. Superseded editions, source copies, scripts, intermediates, audits and previews were deleted from the active folders after being committed to Git.
+- The shared production history and reusable workflow remain in this file. Earlier source and support files can be restored from Git history when needed.
 - Each project's `CURRENT_FILES.md` is the delivery index. Use it instead of opening files by guessing from a working directory.
 
 ## Reusable production sequence for the next book
@@ -14,8 +14,9 @@ This guide records how *Serenity and Tranquillity* and *Givers and Takers in Afr
 
 1. Save every supplied source file byte-for-byte in a clearly named `Source_Materials` folder. Keep the original cover art with the sources.
 2. Record a file inventory and identify which files are the manuscript, author brief, proposal, research/reference material, images and production directions.
-3. Separate authored book text from embedded instructions, planning notes and file metadata before assembly. Keep a source-boundary note so that instructions are not accidentally printed as book prose.
-4. Do not edit the source originals. Make repairs in a separate working copy and log each one.
+3. Commit the received source package before editing so that it can be restored even if the active project is later cleaned to final-only files.
+4. Separate authored book text from embedded instructions, planning notes and file metadata before assembly. Keep a source-boundary note so that instructions are not accidentally printed as book prose.
+5. Do not edit the source originals. Make repairs in a separate working copy and log each one.
 
 ### 2. Agree the editorial boundary before layout
 
@@ -57,7 +58,7 @@ This guide records how *Serenity and Tranquillity* and *Givers and Takers in Afr
 - Check PDF links after saving, index locators against each edition, and two-up links if that file is requested.
 - Run EPUBCheck on the final EPUB, verify package resources and link targets, and inspect representative phone/tablet sizes with enlarged text.
 - Inspect the first, middle and final pages, copyright page, contents, index, back matter, cover JPEG and full-wrap proof visually.
-- Update the file guide. Keep only deliverables and the file guide at the project top level; retain all sources, tools, previews and reports in the working archive. Compare file hashes after copying final deliverables.
+- Update the file guide. For a final-only handoff, keep only deliverables and the file guide in the project folder. First confirm the source, tools and production history are committed; then delete working copies when the user requests it. Compare file hashes before removing duplicate deliverables.
 - Commit the finished project locally. Treat a GitHub push as a separate network operation and confirm that it succeeded before saying the remote is updated.
 
 ## How *Serenity and Tranquillity* was produced
@@ -92,11 +93,11 @@ The original *Serenity and Tranquillity* index was near the end, not at the begi
 
 ### Source boundaries and preservation
 
-Five supplied text files and the supplied full-wrap JPEG were copied unchanged into `Production_Working_Files/Source_Materials`. The first text file combines Prof's brief and planning notes with Chapters 1–3; only the passage beginning at `CHAPTER ONE` and ending before `3. DIRECTION FOR THE REMAINING CHAPTERS` was treated as manuscript. The other source files supplied Chapters 4–15 and back matter.
+Five supplied text files and the supplied full-wrap JPEG were copied unchanged into `Production_Working_Files/Source_Materials` during production. The first text file combines Prof's brief and planning notes with Chapters 1–3; only the passage beginning at `CHAPTER ONE` and ending before `3. DIRECTION FOR THE REMAINING CHAPTERS` was treated as manuscript. The other source files supplied Chapters 4–15 and back matter. At the user's request, the source copies and production files were later deleted from the active tree; their committed versions remain in Git history.
 
 All 15 chapters and 158 numbered headings were assembled in source order. The preservation audit found all 1,892 chapter lines matched after the documented damaged-citation repair. It records 375 back-matter lines/cells and explains the specific changes. No chapter was rewritten, merged or renumbered.
 
-Working-copy changes were limited and logged: repair the damaged Afrobarometer citation and add its full reference; keep one copy each of duplicate Sen (1999) and North (1990) citations; exclude one embedded editorial instruction; and format the 15 policy recommendations in a table without changing their order or wording. The source files remain intact.
+Working-copy changes were limited and logged: repair the damaged Afrobarometer citation and add its full reference; keep one copy each of duplicate Sen (1999) and North (1990) citations; exclude one embedded editorial instruction; and format the 15 policy recommendations in a table without changing their order or wording. The supplied originals were not edited; their committed copies remain in Git history.
 
 ### Editions and ISBN/cover handling
 
@@ -126,5 +127,5 @@ The original full wrap's spine was far too wide for the new interior. A 167-page
 5. Place the generated subject index after all end matter; create a two-up file only if requested.
 6. Make the standalone front cover; build the print wrap from final page count and the selected printer template.
 7. Perform one final text, page, index, link, cover and EPUB validation pass; update the file guide.
-8. Keep final files at the project root, archive sources/tools/reports, verify copies, and commit locally. Confirm separately whether and where the commit was pushed.
+8. Keep final files and the file guide in the project folder. Commit sources and production history before deleting support copies when a final-only workspace is requested. Confirm separately whether and where the commit was pushed.
 
