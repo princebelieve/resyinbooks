@@ -2,6 +2,8 @@
 
 The finished, usable editions are kept in this folder. Source files, assembly masters, build tools, validation reports and previews are preserved in [Production_Working_Files](Production_Working_Files/README.md), following the layout used for *Serenity and Tranquillity*.
 
+For the full production history and reusable workflow for both books, see [Book_Production_Workflow.md](../Book_Production_Workflow.md).
+
 | File | Use |
 | --- | --- |
 | [Reflowable EPUB](Givers_and_Takers_in_Africa.epub) | Phone, tablet and e-reader edition; validated with EPUBCheck. No separate digital ISBN was supplied. |

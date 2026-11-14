@@ -2,6 +2,8 @@
 
 Use the files in this folder. Superseded editions and old cover wraps are in [Archive_Obsolete](Archive_Obsolete/README.md); no files were deleted. Preview images are in `Previews`.
 
+For the documented production history, avoidable rework and reusable checklist for both Resyin books, see [Book_Production_Workflow.md](../Book_Production_Workflow.md).
+
 | File | Use |
 | --- | --- |
 | [Reflowable EPUB](Serenity_and_Tranquillity.epub) | Recommended for phones, tablets, e-readers and ebook-store submission. Adjustable text, linked contents, section-based index and related-topic links. Validated with EPUBCheck: zero errors or warnings. |
