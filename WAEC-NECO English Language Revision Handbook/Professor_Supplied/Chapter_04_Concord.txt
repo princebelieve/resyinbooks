@@ -1,0 +1,288 @@
+Chapter Four
+
+Concord (Subject–Verb Agreement)
+
+Learning Objectives
+
+At the end of this chapter, students should be able to:
+
+- Define concord.
+- Explain the rules governing subject–verb agreement.
+- Identify common concord errors.
+- Apply concord rules correctly in speech and writing.
+- Answer WAEC and NECO concord questions accurately.
+
+---
+
+4.1 Meaning of Concord
+
+Concord, also known as subject–verb agreement, is the grammatical relationship in which the verb agrees with its subject in number and person.
+
+A singular subject takes a singular verb, while a plural subject takes a plural verb.
+
+Examples
+
+- The boy plays football. ✓
+- The boys play football. ✓
+
+---
+
+4.2 Basic Rules of Concord
+
+Rule 1: Singular Subject Takes a Singular Verb
+
+Examples:
+
+- The teacher teaches English.
+- My sister lives in Abuja.
+- The dog barks loudly.
+
+---
+
+Rule 2: Plural Subject Takes a Plural Verb
+
+Examples:
+
+- The teachers teach English.
+- The students study hard.
+- The players train every morning.
+
+---
+
+Rule 3: Compound Subjects Joined by "And"
+
+When two singular nouns are joined by and, they usually take a plural verb.
+
+Examples:
+
+- John and Mary are friends.
+- Bread and butter are available.
+
+Exception
+
+If the two nouns refer to one person or one idea, use a singular verb.
+
+Examples:
+
+- Bread and butter is my favourite breakfast.
+- Rice and stew is served every afternoon.
+
+---
+
+Rule 4: Subjects Joined by "Either...Or" and "Neither...Nor"
+
+The verb agrees with the subject nearest to it.
+
+Examples:
+
+- Either the teacher or the students are coming.
+- Either the students or the teacher is coming.
+- Neither Musa nor James is present.
+- Neither the boys nor their father is at home.
+
+---
+
+Rule 5: Indefinite Pronouns
+
+Words such as everyone, everybody, someone, somebody, anyone, anybody, nobody, no one, each, either, neither take singular verbs.
+
+Examples:
+
+- Everyone is ready.
+- Nobody knows the answer.
+- Each of the players has a jersey.
+
+---
+
+Rule 6: Collective Nouns
+
+Collective nouns generally take singular verbs when regarded as one unit.
+
+Examples:
+
+- The committee has submitted its report.
+- The family is travelling tomorrow.
+- The jury has reached a verdict.
+
+---
+
+Rule 7: Uncountable Nouns
+
+Uncountable nouns always take singular verbs.
+
+Examples:
+
+- Information is useful.
+- Furniture is expensive.
+- Advice is valuable.
+- Equipment has arrived.
+
+---
+
+Rule 8: Amounts of Money, Time and Distance
+
+When regarded as one unit, they take singular verbs.
+
+Examples:
+
+- Five thousand naira is enough.
+- Ten kilometres is a long distance.
+- Two hours is sufficient.
+
+---
+
+Rule 9: Titles of Books, Films and Newspapers
+
+Titles take singular verbs even when they appear plural.
+
+Examples:
+
+- Great Expectations is an interesting novel.
+- The Chronicles of Narnia is widely read.
+
+---
+
+Rule 10: "One of..."
+
+Use a singular verb after "one of".
+
+Examples:
+
+- One of the students has arrived.
+- One of the teachers was absent.
+
+---
+
+Rule 11: "A Number of" and "The Number of"
+
+- A number of students are absent.
+- The number of students is increasing.
+
+---
+
+Rule 12: Words Ending in "-s" but Singular in Meaning
+
+Examples:
+
+- Mathematics is my favourite subject.
+- Economics is interesting.
+- Physics is difficult for some students.
+
+---
+
+4.3 Common Concord Errors
+
+Incorrect: She don't know me.
+
+Correct: She doesn't know me.
+
+Incorrect: Everybody have arrived.
+
+Correct: Everybody has arrived.
+
+Incorrect: The committee have agreed.
+
+Correct: The committee has agreed.
+
+Incorrect: Neither the principal nor the teachers is coming.
+
+Correct: Neither the principal nor the teachers are coming.
+
+Incorrect: One of the boys are absent.
+
+Correct: One of the boys is absent.
+
+---
+
+4.4 Tips for Answering Concord Questions
+
+- Identify the main subject before choosing the verb.
+- Ignore words between the subject and the verb.
+- Be careful with collective nouns and indefinite pronouns.
+- Watch out for expressions such as either...or, neither...nor, a number of, and the number of.
+- Read each sentence carefully before selecting an answer.
+
+---
+
+Chapter Summary
+
+Concord is one of the most frequently tested areas in WAEC and NECO English Language examinations. Students who master the rules of subject–verb agreement are less likely to make grammatical errors in essays, comprehension, summary writing and objective questions.
+
+---
+
+WAEC/NECO Revision Questions
+
+Objective Questions
+
+Choose the correct option.
+
+1. Everybody ______ present.
+   a. are
+   b. were
+   c. is
+   d. have
+
+2. Neither the boys nor their father ______ at home.
+   a. are
+   b. were
+   c. is
+   d. have
+
+3. Mathematics ______ an interesting subject.
+   a. are
+   b. were
+   c. is
+   d. have
+
+4. One of the girls ______ won the prize.
+   a. have
+   b. are
+   c. has
+   d. were
+
+5. A number of candidates ______ absent yesterday.
+   a. is
+   b. was
+   c. are
+   d. has
+
+---
+
+Theory Questions
+
+1. Define concord.
+2. Explain six important rules of concord with suitable examples.
+3. Distinguish between:
+   - A number of...
+   - The number of...
+4. Explain the concord rules governing:
+   - Collective nouns
+   - Indefinite pronouns
+   - Compound subjects
+5. Correct the following sentences:
+   - Everybody know the answer.
+   - The committee have submitted their report.
+   - Neither James nor his sisters is present.
+   - Economics are difficult.
+   - One of the boys have left.
+
+---
+
+Practical Exercise
+
+Choose the correct verb in each sentence.
+
+1. Every student (is/are) expected to attend the lesson.
+2. The quality of the books (is/are) excellent.
+3. Neither my father nor my brothers (is/are) travelling today.
+4. The news (is/are) encouraging.
+5. Each of the players (has/have) received a medal.
+
+---
+
+WAEC/NECO Examination Tips
+
+- Read the sentence from beginning to end before selecting an answer.
+- Identify the true subject of the sentence.
+- Remember that words such as everyone, nobody, each, and either always take singular verbs.
+- Practise past WAEC and NECO questions regularly to become familiar with common concord patterns.

@@ -56,7 +56,8 @@ dd { margin: .25em 0 .6em 1em; }
 '''
 
 def config():
-    tree=ast.parse((BASE/'build_subject_index.py').read_text(encoding='utf-8'))
+    # Accept a UTF-8 BOM on the index builder; ast.parse expects clean text.
+    tree=ast.parse((BASE/'build_subject_index.py').read_text(encoding='utf-8-sig'))
     result={}
     for item in tree.body:
         if isinstance(item,ast.Assign):

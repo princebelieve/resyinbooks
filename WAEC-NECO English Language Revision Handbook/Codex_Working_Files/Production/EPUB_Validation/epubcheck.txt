@@ -1,0 +1,4 @@
+﻿EPUBCheck 5.4.0
+File: For_Professor/The_Complete_WAEC_NECO_English_Language_Revision_Handbook.epub
+Result: No errors or warnings detected.
+Messages: 0 fatals / 0 errors / 0 warnings / 0 infos

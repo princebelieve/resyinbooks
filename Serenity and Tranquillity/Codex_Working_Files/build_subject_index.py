@@ -15,6 +15,8 @@ DELIVERY = PROJECT / 'For_Professor'
 ARCHIVE = BASE / 'Source_Baselines'
 
 def source_path(name):
+    expanded=ARCHIVE/'TOC_Expanded'/name.replace('.pdf','_TOCExpanded.pdf')
+    if expanded.exists(): return expanded
     current=BASE/name
     return current if current.exists() else ARCHIVE/name
 
@@ -440,6 +442,8 @@ def make_index(rows,w,h,start_number):
     return out,navigation,anchors,cross_links
 
 def add_navigation(output,index_start,navigation,anchors,cross_links,lines,digital):
+    # The printed interior retains locator text but has no interactive hotspots.
+    if not digital: return []
     records=[]
     def link(page_no,rect,dest,point,kind,label,underline=False):
         p=output[page_no]
@@ -543,7 +547,10 @@ def build_pdf(source,target):
         for i in range(index_start,index_end):
             output[i].insert_text((57,73),'Click a page number or a See reference to follow its link.',fontname='tiit',fontsize=9,color=(0.1,0.35,0.45))
     output.set_metadata({**doc.metadata,'subject':'Clickable subject index and internal topic navigation'})
-    output.save(DELIVERY/target,garbage=4,deflate=True)
+    target_path=DELIVERY/target
+    temp_path=target_path.with_name(target_path.stem+'.build.tmp.pdf')
+    output.save(temp_path,garbage=4,deflate=True)
+    temp_path.replace(target_path)
     # Verify the actual saved file, including every unchanged chapter page.
     saved=fitz.open(DELIVERY/target)
     chapter_end=next(x[0] for x in lines if x[2]=='REFERENCES AND BIBLIOGRAPHY')
@@ -629,22 +636,17 @@ def main():
         p=spreads.new_page(width=w*2,height=h)
         p.show_pdf_page(fitz.Rect(0,0,w,h),source,i)
         if i+1<len(source): p.show_pdf_page(fitz.Rect(w,0,w*2,h),source,i+1)
-    for i,p in enumerate(source):
-        for item in p.get_links():
-            if item['kind']!=fitz.LINK_GOTO: continue
-            rect=fitz.Rect(item['from']); rect.x0+=(i%2)*w; rect.x1+=(i%2)*w
-            dest=item['page']; point=fitz.Point(item.get('to',fitz.Point(0,0)))
-            point.x+=(dest%2)*w
-            spreads[i//2].insert_link({'kind':fitz.LINK_GOTO,'from':rect,'page':dest//2,'to':point})
-    spreads.save(DELIVERY/'Serenity_and_Tranquillity_Hardcopy_A5_2up_Indexed.pdf',garbage=4,deflate=True)
+    # The two-up hardcopy is a paper-printing file and carries no link annotations.
+    spread_path=DELIVERY/'Serenity_and_Tranquillity_Hardcopy_A5_2up_Indexed.pdf'
+    spread_temp=spread_path.with_name(spread_path.stem+'.build.tmp.pdf')
+    spreads.save(spread_temp,garbage=4,deflate=True); spread_temp.replace(spread_path)
     checked_spreads=fitz.open(DELIVERY/'Serenity_and_Tranquillity_Hardcopy_A5_2up_Indexed.pdf')
-    expected=sum(len(p.get_links()) for p in source)
-    assert sum(len(p.get_links()) for p in checked_spreads)==expected
+    assert sum(len(p.get_links()) for p in checked_spreads)==0
     assert all(0<=l['page']<len(checked_spreads) for p in checked_spreads for l in p.get_links())
     (BASE/'Subject_Index_Audit.json').write_text(json.dumps({'editions':results,'word':word},indent=2),encoding='utf-8')
     lines=['# Subject index review','', 'The previous subject index contained topic associations but no page locators. It also combined several entries in each paragraph. It has been replaced in the indexed editions with an alphabetical two-column index, letter headings, subordinate entries, cross-references, and edition-specific page locators.','', 'Locators identify the substantive retained manuscript sections, including continuation pages. They exclude the contents, bibliography, glossary and index. Selected additional terms (including artificial intelligence) are located directly in chapter text. See Subject_Index_Audit.json for the entry-to-section/page mapping.','']
     for r in results: lines.append(f"- {r['output']}: {r['pages']} pages; index begins on page {r['index_start']}, occupying {r['index_pages']} pages; {r['entries']} topic/subtopic entries plus {len(CROSS)} cross-references.")
-    lines+=['','All printed index numbers (including both ends of ranges) are clickable in the one-page PDFs and the two-up print PDF. See references lead to their corresponding index entries. The digital PDF also has selective underlined topic links to substantive section discussions and a Subject index return link on chapter pages. Use your PDF readerâ€™s Back/Previous View command to return to the previous reading location.','', 'Link destinations and rectangles were checked after reopening each saved one-page PDF. Every index row and column width was checked. Chapter text and pagination were preserved; the digital edition adds a small navigation control to the footer. Back matter after the index has been renumbered. Original editions are retained in Source_Baselines.','', 'The indexed DOCX contains hidden XE index markers and a native Word INDEX field. Open it in Word, select all, and press F9 to populate its own page numbers. Its locators must not be copied from either PDF. Interactive navigation is supplied in the PDFs.','', 'No current full-wrap print cover is available. Obtain the selected printer's template and paper/binding specifications before producing one. The two-up PDF is a reading/printing spread, not booklet imposition.']
+    lines+=['','The printed editions show index locators as text. The digital PDF has clickable index numbers, See references, selective topic links and a return-to-index control on chapter pages. Use the PDF reader Back/Previous View command to return to the prior reading location.','', 'Link destinations are checked after saving the digital PDF. The print and digital PDFs are checked separately for page size and index layout. Chapter text is retained; the expanded Contents shifts downstream page numbers, which are recalculated for each format. Back matter follows the index. Original source baselines are retained.','', 'The indexed DOCX contains hidden XE index markers and a native Word INDEX field. Open it in Word, select all, and press F9 to populate its page numbers. Its locators must not be copied from either PDF.','', 'No current full-wrap print cover is available. Obtain the selected printer template and paper/binding specifications before producing one. The two-up PDF is a print spread, not booklet imposition.']
     (BASE/'Subject_Index_Notes.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
     print(json.dumps([{**{k:v for k,v in r.items() if k not in ('evidence','navigation')},
         'links':{kind:sum(x['kind']==kind for x in r['navigation']) for kind in sorted(set(x['kind'] for x in r['navigation']))}}

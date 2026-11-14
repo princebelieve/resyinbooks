@@ -7,11 +7,11 @@ Start here. Files are separated by use: [For_Professor](For_Professor/README.md)
 | [Reflowable EPUB](For_Professor/Givers_and_Takers_in_Africa.epub) | Phone, tablet and e-reader edition. No digital ISBN was supplied. |
 | [Digital reading PDF](For_Professor/Givers_and_Takers_in_Africa_Digital_Readable_Indexed.pdf) | A4 screen-reading edition. |
 | [A5 print interior](For_Professor/Givers_and_Takers_in_Africa_Print_Interior_A5_Indexed.pdf) | 167-page A5 interior, one book page per PDF page; includes the print ISBN in plain text. |
-| [A5 two-up print file](For_Professor/Givers_and_Takers_in_Africa_Hardcopy_A5_2up_Indexed.pdf) | The same 167-page interior imposed as 84 landscape spreads (the last spread has one blank page). |
+| [A5 two-up print file](For_Professor/Givers_and_Takers_in_Africa_Hardcopy_A5_2up_Indexed.pdf) | The same 167-page interior imposed as 84 landscape spreads (the last spread has one blank page); print-only. |
 | [Editable Word manuscript](For_Professor/Givers_and_Takers_in_Africa_Manuscript_Edit_Indexed.docx) | Editable indexed manuscript; update the Word index field with F9 after layout changes. |
 | [Digital front cover](For_Professor/Givers_and_Takers_in_Africa_Cover_Front.jpg) | Standalone front-only JPEG for ebook/retailer upload. |
 
-The subject index is at the end of each edition, after all supplied back matter. The print ISBN also appears as a barcode on the supplied back-cover art.
+The Contents lists each chapter's full title and opening page number. The subject index is at the end of each edition, after all supplied back matter. Print editions contain no interactive link annotations; digital navigation remains in the A4 PDF and EPUB. The print ISBN also appears as a barcode on the supplied back-cover art.
 
 ## Which cover is which?
 

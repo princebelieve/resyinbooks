@@ -1,0 +1,98 @@
+﻿[
+    {
+        "file":  "Chapter_02_Grammar_Parts_of_Speech.txt",
+        "bytes":  6055,
+        "sha256":  "B045BF0C9F4F3E7DC15F3E3D3B53CE937C331529CCF34E437E29576A25F9B5A7",
+        "preservation":  "SHA-256 verified against supplied attachment"
+    },
+    {
+        "file":  "Chapter_03_Tenses_and_Sentence_Structure.txt",
+        "bytes":  7547,
+        "sha256":  "0AE039336614B36A3DF51F7274430CFC0DFF39DA3733612809D410FEA6DFD9E4",
+        "preservation":  "SHA-256 verified against supplied attachment"
+    },
+    {
+        "file":  "Chapter_04_Concord.txt",
+        "bytes":  6325,
+        "sha256":  "F79384E45D9690B99DE14D0D3445D89C7D5A729B4943EF293F5DB9DC05163C13",
+        "preservation":  "SHA-256 verified against supplied attachment"
+    },
+    {
+        "file":  "Chapter_05_Lexis_and_Structure.txt",
+        "bytes":  7086,
+        "sha256":  "1F2A17CAD103CBC1E3F1084E2FABDAB064A56F8A86700FB7DC3DD1D4BF28B24A",
+        "preservation":  "SHA-256 verified against supplied attachment"
+    },
+    {
+        "file":  "Chapter_06_Comprehension.txt",
+        "bytes":  7191,
+        "sha256":  "C08F7682282E9CECFB7066CDC8789ED0FFF7DD19C5950ADE116BC1ACDB404A1A",
+        "preservation":  "SHA-256 verified against supplied attachment"
+    },
+    {
+        "file":  "Chapter_07_Summary_Writing.txt",
+        "bytes":  6606,
+        "sha256":  "66567BD0815779053AA31B9C7E43E99B90CA08D97D8C12051D364646908E3E23",
+        "preservation":  "SHA-256 verified against supplied attachment"
+    },
+    {
+        "file":  "Chapter_08_Essay_Writing.txt",
+        "bytes":  7249,
+        "sha256":  "6C140321AFAAF382464635668905DE4D0631BB32C0B99F27F3257E5A87C74629",
+        "preservation":  "SHA-256 verified against supplied attachment"
+    },
+    {
+        "file":  "Chapter_09_Letter_Writing.txt",
+        "bytes":  6172,
+        "sha256":  "11185BD67287532A0C8BBC8AA88C00F43AAF804A3236C617770A587D77BAB83F",
+        "preservation":  "SHA-256 verified against supplied attachment"
+    },
+    {
+        "file":  "Chapter_10_Oral_English.txt",
+        "bytes":  6246,
+        "sha256":  "F43E2F49D8187E917704A2716A48D6B9D9349BD0C9C2CE156122660B0E09E888",
+        "preservation":  "SHA-256 verified against supplied attachment"
+    },
+    {
+        "file":  "Chapter_11_Figures_of_Speech_and_Literary_Devices.txt",
+        "bytes":  6463,
+        "sha256":  "D5841DA82053FA776ADDFC8A394491D7CEDE7C49AF384883ABFBF087FEB18842",
+        "preservation":  "SHA-256 verified against supplied attachment"
+    },
+    {
+        "file":  "Chapter_12_Registers_and_Idioms.txt",
+        "bytes":  7305,
+        "sha256":  "1B050A8E4027A2CFA1E3A70F76B80BE387D562719AAC0BC90D9E022F24F31D68",
+        "preservation":  "SHA-256 verified against supplied attachment"
+    },
+    {
+        "file":  "Chapter_13_Vocabulary_Development.txt",
+        "bytes":  7233,
+        "sha256":  "155E8180A9075BA4020C87EBE9D835A2FE6BDD651DFA30FEE439ADD0BE9E406F",
+        "preservation":  "SHA-256 verified against supplied attachment"
+    },
+    {
+        "file":  "Chapter_14_WAEC_NECO_Practice.txt",
+        "bytes":  6685,
+        "sha256":  "D80DD3960CFD49C31EF079C1FB6FAF20D72FB1644D30906D451559B98C0248BB",
+        "preservation":  "SHA-256 verified against supplied attachment"
+    },
+    {
+        "file":  "Chapter_15_Mock_Examinations_and_Marking_Guide.txt",
+        "bytes":  7106,
+        "sha256":  "C99CBD7019FA56AF0332749E08E476449937D0EC47EDE470E649ACB99892DC47",
+        "preservation":  "SHA-256 verified against supplied attachment"
+    },
+    {
+        "file":  "Chapter_16_Examination_Success_and_Communication.txt",
+        "bytes":  5150,
+        "sha256":  "AC44E07BF5ED9ECE186F89C2037B218814839AC3F6928DA80A24A62BD30DAE00",
+        "preservation":  "SHA-256 verified against supplied attachment"
+    },
+    {
+        "file":  "Supplied_Cover_Wrap.jpeg",
+        "bytes":  218473,
+        "sha256":  "51DADE88ECED2060E45EE5E52509C4D0C07E21ED4497B27D96B7561730F2B827",
+        "preservation":  "User-supplied original; retained unchanged"
+    }
+]

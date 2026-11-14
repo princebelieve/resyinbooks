@@ -12,18 +12,20 @@ EPUBCheck 5.4.0 passed with zero errors and zero warnings. Internal resources an
 
 For current deliverables and reading instructions, see [CURRENT_FILES.md](../CURRENT_FILES.md). `Source_Baselines` contains three retained layout baselines (the prior print PDF, screen PDF and editable DOCX) required by `build_subject_index.py`; they are build inputs, not current editions. Other superseded duplicate editions were removed. Preview images are in `Previews`.
 
-Index numbers and See references are now clickable in all current PDFs, including the two-up version. The digital PDF additionally contains 177 selective related-topic links and 203 return-to-index controls. Internal link destinations were checked after saving. These additions preserve chapter pagination and wording; the digital footer includes a small navigation label.
+The later TOC correction (14 November 2026) replaces generic chapter labels with all 25 complete chapter titles across two one-column pages. The opening page numbers match each chapter's printed folio. The EPUB keeps its original single-column, reflowable TOC for phones. The digital PDF keeps clickable navigation; the A5 and two-up print files have no link annotations.
+
+The actual extracted body type is 11 pt in the A5 print PDF and 11.5 pt in the A4 digital PDF. After review, the Contents entries in both PDFs were raised from their smaller sizes to 11 pt for readability. Eleven-point body type is within the conventional range for adult print interiors; it is smaller than the 14 pt used for the children's guide.
 
 The existing subject index listed topics without page references and combined multiple entries into paragraphs. The new editions replace it with an alphabetical, two-column index containing 266 topic/subtopic entries, 11 cross-references, letter headings, and page ranges. References were generated separately for each PDF from substantive manuscript sections.
 
-- [Indexed A5 print interior](../For_Professor/Serenity_and_Tranquillity_Print_Interior_A5_Indexed.pdf): 345 pages, based on the 339-page, 11 pt, head-corrected edition. Index: pages 339-345, after all remaining end matter.
-- [Indexed two-up hardcopy](../For_Professor/Serenity_and_Tranquillity_Hardcopy_A5_2up_Indexed.pdf): 173 landscape spreads; last right-hand page is blank.
-- [Indexed digital PDF](../For_Professor/Serenity_and_Tranquillity_Digital_Readable_Indexed.pdf): 229 pages, with its corrected cover. Index: pages 225-229, after all remaining end matter.
+- [Indexed A5 print interior](../For_Professor/Serenity_and_Tranquillity_Print_Interior_A5_Indexed.pdf): 346 pages, based on a 340-page, 11 pt, head-corrected edition with the expanded Contents. Index: pages 340-346, after all remaining end matter.
+- [Indexed two-up hardcopy](../For_Professor/Serenity_and_Tranquillity_Hardcopy_A5_2up_Indexed.pdf): 173 landscape spreads; last right-hand page is blank; print-only.
+- [Indexed digital PDF](../For_Professor/Serenity_and_Tranquillity_Digital_Readable_Indexed.pdf): 230 pages, with its corrected cover. Index: pages 226-230, after all remaining end matter.
 - [Editable indexed manuscript](../For_Professor/Serenity_and_Tranquillity_Interior_Edit_Indexed.docx): native Word index markers and INDEX field. Select all in Word and press F9 to populate its page references after layout.
 
-Chapter text and total pagination were checked against the source PDFs and remain unchanged. The remaining end matter now precedes the index; the index is the final section. The retained layout baselines remain available in `Source_Baselines`. A current full-wrap print cover is not present; use the selected printer's template to create one for the 345-page interior.
+Chapter text is retained. The added Contents page shifts subsequent page numbers by one; the chapter locators, PDF bookmarks and subject-index references were regenerated from the revised edition. The A5 Contents uses 11 pt and wraps long titles within each row. The retained original and TOC-expanded build baselines remain available in `Source_Baselines`. A current full-wrap print cover is not present; use the selected printer's template to create one for the 346-page interior.
 
-See [index review notes](Subject_Index_Notes.md) and `Subject_Index_Audit.json` for the locator method and entry evidence. Rebuild using `build_subject_index.py` with PyMuPDF retained in `.python_libs`.
+See [index review notes](Subject_Index_Notes.md) and `Subject_Index_Audit.json` for the locator method and entry evidence. Rebuild with `expand_chapter_contents.py` followed by `build_subject_index.py`; PyMuPDF is retained in `.python_libs`. Print files have no interactive links; digital PDF links remain enabled.
 
 ## Earlier editions (archived; historical notes below)
 

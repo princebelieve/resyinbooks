@@ -29,10 +29,11 @@ Following the copyright-page pattern in *Serenity and Tranquillity*, I added the
 
 1. `python build_manuscript.py` rebuilds the editable source master.
 2. `python build_pdf_interiors.py` renders A5 and A4 base interiors through local Edge.
-3. `python build_pdf_indexes.py` uses PyMuPDF retained under `../../Serenity and Tranquillity/Codex_Working_Files/.python_libs` to add each PDF's section-based index and navigation, then creates the link-preserving two-up file, previews and audit.
-4. `python build_indexed_docx.py` creates a separate editable copy with native Word index markers.
-5. `python build_epub.py` creates the reflowable EPUB from source text and the same index configuration.
-6. `python validate_epub.py` extracts a review tree and checks EPUB resource/fragment targets. `node check_epub_mobile.mjs` records the responsive preview checks. Run EPUBCheck with `java -jar "../../Serenity and Tranquillity/Codex_Working_Files/.tools/epubcheck-5.4.0/epubcheck.jar" "../For_Professor/Givers_and_Takers_in_Africa.epub"`; its saved reports are in `Production/EPUB_Validation`.
-7. `prepare_print_cover.ps1` rebuilds the A5 wrap proof; `python build_print_cover_pdf.py` wraps it in a dimensioned PDF and refreshes the cover audit.
+3. `python build_pdf_indexes.py` uses retained PyMuPDF to add the section-based index and digital navigation.
+4. `python repair_contents_locators.py` adds chapter-opening page numbers beside the existing full chapter titles, removes annotations from both print PDFs, and rebuilds the two-up print-only file. It does not alter chapter text or pagination.
+5. `python build_indexed_docx.py` creates a separate editable copy with native Word index markers.
+6. `python build_epub.py` creates the reflowable EPUB from source text and the same index configuration.
+7. `python validate_epub.py` extracts a review tree and checks EPUB resource/fragment targets. `node check_epub_mobile.mjs` records responsive preview checks. Run EPUBCheck with `java -jar "../../Serenity and Tranquillity/Codex_Working_Files/.tools/epubcheck-5.4.0/epubcheck.jar" "../For_Professor/Givers_and_Takers_in_Africa.epub"`; its saved reports are in `Production/EPUB_Validation`.
+8. `prepare_print_cover.ps1` rebuilds the A5 wrap proof; `python build_print_cover_pdf.py` wraps it in a dimensioned PDF and refreshes the cover audit.
 
 Base PDFs and intermediate HTML are retained in `Production` to make each stage reproducible. Final editions are written to `../For_Professor`; use the files listed in `../CURRENT_FILES.md` for review.
