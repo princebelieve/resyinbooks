@@ -16,12 +16,12 @@ Index numbers and See references are now clickable in all current PDFs, includin
 
 The existing subject index listed topics without page references and combined multiple entries into paragraphs. The new editions replace it with an alphabetical, two-column index containing 266 topic/subtopic entries, 11 cross-references, letter headings, and page ranges. References were generated separately for each PDF from substantive manuscript sections.
 
-- [Indexed A5 print interior](Serenity_and_Tranquillity_Print_Interior_A5_Indexed.pdf): 345 pages, based on the 339-page, 11 pt, head-corrected edition. Index: pages 334-340.
+- [Indexed A5 print interior](Serenity_and_Tranquillity_Print_Interior_A5_Indexed.pdf): 345 pages, based on the 339-page, 11 pt, head-corrected edition. Index: pages 339-345, after all remaining end matter.
 - [Indexed two-up hardcopy](Serenity_and_Tranquillity_Hardcopy_A5_2up_Indexed.pdf): 173 landscape spreads; last right-hand page is blank.
-- [Indexed digital PDF](Serenity_and_Tranquillity_Digital_Readable_Indexed.pdf): 229 pages, with its corrected cover. Index: pages 221-225.
+- [Indexed digital PDF](Serenity_and_Tranquillity_Digital_Readable_Indexed.pdf): 229 pages, with its corrected cover. Index: pages 225-229, after all remaining end matter.
 - [Editable indexed manuscript](Serenity_and_Tranquillity_Interior_Edit_Indexed.docx): native Word index markers and INDEX field. Select all in Word and press F9 to populate its page references after layout.
 
-Chapter text and pagination were checked against the source PDFs and remain unchanged. Following back matter was renumbered. Original files remain available. The 339-page print cover requires a spine adjustment for the new 345-page interior before printing.
+Chapter text and total pagination were checked against the source PDFs and remain unchanged. The remaining end matter now precedes the index; the index is the final section. Original files remain available. The 339-page print cover requires a spine adjustment for the new 345-page interior before printing.
 
 See [index review notes](Subject_Index_Notes.md) and `Subject_Index_Audit.json` for the locator method and entry evidence. Rebuild using `build_subject_index.py` with PyMuPDF available in `.python_libs`.
 

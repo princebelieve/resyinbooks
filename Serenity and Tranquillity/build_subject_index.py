@@ -510,12 +510,12 @@ def build_pdf(source,target):
     clip=fitz.Rect(0,last[1][1]-1,w,h-38)
     p.show_pdf_page(fitz.Rect(0,40,w,40+clip.height),tail,0,clip=clip)
     tail.delete_page(0); tail.insert_pdf(list_page,start_at=0)
-    # Index is inserted at the original position, on a fresh page.
-    output=fitz.open(); output.insert_pdf(doc,to_page=a)
-    index,navigation,anchors,cross_links=make_index(rows,w,h,len(output)+1); index_start=len(output)
-    output.insert_pdf(index); tail_start=len(output)
+    # Preserve the end matter and place the subject index after all of it.
+    output=fitz.open(); output.insert_pdf(doc,to_page=a); tail_start=len(output)
     output.insert_pdf(tail)
-    # Renumber back matter after insertion; all chapter pages remain unchanged.
+    index,navigation,anchors,cross_links=make_index(rows,w,h,len(output)+1); index_start=len(output)
+    output.insert_pdf(index); index_end=index_start+len(index)
+    # Renumber the repositioned end matter; all chapter pages remain unchanged.
     for i in range(tail_start,len(output)):
         p=output[i]; remove_area(p,fitz.Rect(0,h-38,w,h))
         p.insert_text((w/2-10,h-25),str(i+1),fontname='tiro',fontsize=9)
@@ -538,7 +538,7 @@ def build_pdf(source,target):
     digital='Digital' in source
     links=add_navigation(output,index_start,navigation,anchors,cross_links,lines,digital)
     if digital:
-        for i in range(index_start,tail_start):
+        for i in range(index_start,index_end):
             output[i].insert_text((57,73),'Click a page number or a See reference to follow its link.',fontname='tiit',fontsize=9,color=(0.1,0.35,0.45))
     output.set_metadata({**doc.metadata,'subject':'Clickable subject index and internal topic navigation'})
     output.save(BASE/target,garbage=4,deflate=True)
@@ -555,11 +555,11 @@ def build_pdf(source,target):
                    and abs(l['from'].x0-record['rect'][0])<0.1
                    and abs(l['from'].y0-record['rect'][1])<0.1 for l in candidates),record
     assert all(1<=p<=chapter_end for e in evidence for p in e['pages'])
-    assert 'Accountability' in ''.join(saved[i].get_text() for i in range(index_start,tail_start))
-    index_text=' '.join(' '.join(saved[i].get_text().split()) for i in range(index_start,tail_start))
+    assert 'Accountability' in ''.join(saved[i].get_text() for i in range(index_start,index_end))
+    index_text=' '.join(' '.join(saved[i].get_text().split()) for i in range(index_start,index_end))
     for kind,text,_ in rows:
         assert ' '.join(text.split()) in index_text, ('missing index row',text)
-    for i in range(index_start,tail_start):
+    for i in range(index_start,index_end):
         for block in saved[i].get_text('dict')['blocks']:
             for line in block.get('lines',[]):
                 assert line['bbox'][0]>=40 and line['bbox'][2]<=w-35, ('index overflow',i,line)
@@ -601,7 +601,9 @@ def build_docx():
     field=ET.Element(q('p'))
     f=ET.SubElement(field,q('fldSimple')); f.set(q('instr'),' INDEX \\h "A" \\c "2" \\e ", " '); f.set(q('dirty'),'true')
     ET.SubElement(ET.SubElement(f,q('r')),q('t')).text='Update this index in Word: select all (Ctrl+A), then press F9. Page references will follow this document’s own layout.'
-    body.insert(list(body).index(children[a])+1,field)
+    body.remove(children[a])
+    sect=body.find(q('sectPr')); pos=list(body).index(sect) if sect is not None else len(body)
+    body.insert(pos,children[a]); body.insert(pos+1,field)
     for main,target in CROSS.items(): xe(children[a],main+'" \\t "See '+target)
     files['word/document.xml']=ET.tostring(root,encoding='utf-8',xml_declaration=True)
     out=BASE/'Serenity_and_Tranquillity_Interior_Edit_Indexed.docx'

@@ -78,7 +78,7 @@ The current standalone retailer cover is [Cover_Front_OnlineStore_From_Original.
 
 ### Index-placement note
 
-The existing *Serenity and Tranquillity* index is near the end, not at the beginning: it occupies print pages 334–340 and digital pages 221–225. In those PDFs it comes before the remaining list of tables/frameworks, author's note and final reflection. This is how that Codex-generated edition was assembled. For new editions, the index should follow all end matter; the newer book's PDFs have been corrected to do that.
+The original *Serenity and Tranquillity* index was near the end, not at the beginning: it occupied print pages 334–340 and digital pages 221–225, before the remaining list of tables/frameworks, author's note and final reflection. That was a Codex placement error, not a standard to copy. I have now rebuilt its current PDFs and editable Word copy so the index follows all end matter. It occupies print pages 339–345 and digital pages 225–229; total page counts remain 345 and 229.
 
 ### Rework that could have been avoided
 
@@ -86,7 +86,7 @@ The existing *Serenity and Tranquillity* index is near the end, not at the begin
 - Cover work based on an earlier page count had to be reconsidered. The final 345-page edition still needs its printer-specific full wrap.
 - The 18-chapter contents and unsupported figure/table lists required rebuilding once the actual 25-chapter manuscript was compared with the front matter.
 - Consolidating and renumbering sections added editorial scope. It should be done only when the author approves a documented restructuring, not as routine formatting.
-- The existing index falls before some other end matter. Future editions should index the fully assembled end matter and place the index last.
+- The index was initially inserted before some end matter. Rebuilding was necessary to move it; future editions should paginate and index only after the full end matter is assembled.
 
 ## How *Givers and Takers in Africa* was produced
 
