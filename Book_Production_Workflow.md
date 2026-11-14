@@ -4,8 +4,8 @@ This guide records how *Serenity and Tranquillity* and *Givers and Takers in Afr
 
 ## Current project folders
 
-- Both project folders now contain only current deliverables and `CURRENT_FILES.md`. Superseded editions, source copies, scripts, intermediates, audits and previews were deleted from the active folders after being committed to Git.
-- The shared production history and reusable workflow remain in this file. Earlier source and support files can be restored from Git history when needed.
+- Each title folder has a `For_Professor` delivery package, a `Codex_Working_Files` work area, and a `Professor_Supplied` source area when original source files are available. Its root `CURRENT_FILES.md` points to those groups. Keep one copy of each deliverable in the delivery package; do not remove ignored local dependencies just because Git does not track them.
+- The shared production history and reusable workflow remain in this file. Use each project's `CURRENT_FILES.md` and support-folder README/production notes to locate current files and rebuild inputs.
 - Each project's `CURRENT_FILES.md` is the delivery index. Use it instead of opening files by guessing from a working directory.
 
 ## Reusable production sequence for the next book
@@ -58,7 +58,7 @@ This guide records how *Serenity and Tranquillity* and *Givers and Takers in Afr
 - Check PDF links after saving, index locators against each edition, and two-up links if that file is requested.
 - Run EPUBCheck on the final EPUB, verify package resources and link targets, and inspect representative phone/tablet sizes with enlarged text.
 - Inspect the first, middle and final pages, copyright page, contents, index, back matter, cover JPEG and full-wrap proof visually.
-- Update the file guide. For a final-only handoff, keep only deliverables and the file guide in the project folder. First confirm the source, tools and production history are committed; then delete working copies when the user requests it. Compare file hashes before removing duplicate deliverables.
+- Update the root file guide. Keep one copy of every deliverable in `For_Professor`, originals in `Professor_Supplied` when they are available, and scripts/build inputs/process records/required local tools in `Codex_Working_Files`. Delete only exact duplicates and demonstrably superseded or erroneous outputs; do not infer that a Git-ignored dependency is disposable.
 - Commit the finished project locally. Treat a GitHub push as a separate network operation and confirm that it succeeded before saying the remote is updated.
 
 ## How *Serenity and Tranquillity* was produced
@@ -93,7 +93,7 @@ The original *Serenity and Tranquillity* index was near the end, not at the begi
 
 ### Source boundaries and preservation
 
-Five supplied text files and the supplied full-wrap JPEG were copied unchanged into `Production_Working_Files/Source_Materials` during production. The first text file combines Prof's brief and planning notes with Chapters 1–3; only the passage beginning at `CHAPTER ONE` and ending before `3. DIRECTION FOR THE REMAINING CHAPTERS` was treated as manuscript. The other source files supplied Chapters 4–15 and back matter. At the user's request, the source copies and production files were later deleted from the active tree; their committed versions remain in Git history.
+Five supplied text files and the supplied full-wrap JPEG are preserved unchanged in `Givers and Takers in Africa/Professor_Supplied`. The first text file combines Prof's brief and planning notes with Chapters 1-3; only the passage beginning at `CHAPTER ONE` and ending before `3. DIRECTION FOR THE REMAINING CHAPTERS` was treated as manuscript. The other source files supplied Chapters 4-15 and back matter. Unique Codex working files are grouped separately in `Givers and Takers in Africa/Codex_Working_Files`; the shareable editions and review cover proof are together in `For_Professor`.
 
 All 15 chapters and 158 numbered headings were assembled in source order. The preservation audit found all 1,892 chapter lines matched after the documented damaged-citation repair. It records 375 back-matter lines/cells and explains the specific changes. No chapter was rewritten, merged or renumbered.
 
@@ -127,5 +127,5 @@ The original full wrap's spine was far too wide for the new interior. A 167-page
 5. Place the generated subject index after all end matter; create a two-up file only if requested.
 6. Make the standalone front cover; build the print wrap from final page count and the selected printer template.
 7. Perform one final text, page, index, link, cover and EPUB validation pass; update the file guide.
-8. Keep final files and the file guide in the project folder. Commit sources and production history before deleting support copies when a final-only workspace is requested. Confirm separately whether and where the commit was pushed.
+8. Keep one copy of each final file and the file guide at the project root. Retain unique sources, scripts, build inputs, process notes, validation records and required local tools in clearly named support folders. Delete only exact duplicates and outputs that are demonstrably superseded or erroneous; a Git-ignored file is not disposable merely because Git does not track it. Confirm separately whether and where a commit was pushed.
 
