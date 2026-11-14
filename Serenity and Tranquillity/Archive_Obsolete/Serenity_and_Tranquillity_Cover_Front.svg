@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="6in" height="9in" viewBox="0 0 432 648">
+    <defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#d6e7ed"/><stop offset="1" stop-color="#fff0cf"/></linearGradient></defs>
+    <rect width="432" height="648" fill="url(#sky)"/><circle cx="330" cy="355" r="46" fill="#ffd987"/>
+    <rect y="495" width="432" height="153" fill="#123b2b"/><path d="M0 485 Q110 438 205 477 T432 470 V535 H0Z" fill="#64834e"/>
+    <path d="M0 513 Q120 476 260 516 T432 495 V560 H0Z" fill="#82a2a1"/>
+    <g fill="#667874"><path d="M45 485V355h36v130zm48 0V330h42v155zm52 0V300h48v185zm58 0V337h41v148zm52 0V360h40v125zm50 0V328h36v157z"/></g>
+    <g fill="#f2d493"><path d="M53 370h5v8h-5zm17 0h5v8h-5zM101 345h6v9h-6zm20 0h6v9h-6zM158 316h6v9h-6zm23 0h6v9h-6zM215 351h6v9h-6zm19 0h6v9h-6z"/></g>
+    <g stroke="#f2f1e8" stroke-width="3"><path d="M377 340v125M377 340l44-38m-44 38-12-54m12 54 50 8"/></g>
+    <g fill="#102544"><circle cx="150" cy="485" r="8"/><path d="M145 493h10l7 34h-24zm-4 19-12 16m25-16 11 16m-20-18-13-11m18 0 12 8"/><circle cx="190" cy="480" r="8"/><path d="M184 488h12l8 39h-28zm-5 19-12 16m24-16 12 16m-20-20-10-11m18 0 12 9"/><circle cx="125" cy="498" r="6"/><path d="M121 504h8l5 23h-18zm-3 12-7 12m15-12 8 12"/></g>
+    <rect x="16" y="35" width="400" height="263" rx="6" fill="#f6f5ef" fill-opacity=".92"/>
+    <text x="216" y="104" text-anchor="middle" fill="#0b1a3a" font-family="Georgia,serif" font-size="44" font-weight="bold">SERENITY</text>
+    <text x="216" y="139" text-anchor="middle" fill="#a46a14" font-family="Georgia,serif" font-size="18">AND</text>
+    <text x="216" y="192" text-anchor="middle" fill="#173f35" font-family="Georgia,serif" font-size="37" font-weight="bold">TRANQUILLITY</text>
+    <text x="216" y="224" text-anchor="middle" fill="#0b1a3a" font-family="Arial,sans-serif" font-size="10" font-weight="bold"><tspan x="216">IN PERSONAL LIFE, COMMUNITY LIFE,</tspan><tspan x="216" dy="16">NATIONAL DEVELOPMENT AND THE FUTURE</tspan><tspan x="216" dy="16">OF HUMANITY</tspan></text>
+    <text x="216" y="276" text-anchor="middle" fill="#173f35" font-family="Georgia,serif" font-size="9" font-style="italic"><tspan x="216">A Philosophy for Sustainable Development, Peaceful</tspan><tspan x="216" dy="13">Coexistence and a Better Future</tspan></text>
+    <rect y="555" width="432" height="93" fill="#061633"/><text x="216" y="584" text-anchor="middle" fill="#f6c756" font-family="Georgia,serif" font-size="9" font-weight="bold">TOWARDS A MORE SERENE, TRANQUIL</text><text x="216" y="598" text-anchor="middle" fill="#f6c756" font-family="Georgia,serif" font-size="9" font-weight="bold">AND SUSTAINABLE WORLD</text><text x="216" y="625" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-size="13">PROF. JOHNSON AGHARESE EGONMWAN</text></svg>

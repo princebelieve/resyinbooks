@@ -1,0 +1,14 @@
+# Local browser state
+_chrome_profile/
+
+# Local production dependencies and caches
+**/.python_libs/
+**/.tools/
+**/__pycache__/
+*.py[cod]
+
+# Common editor and operating-system files
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store

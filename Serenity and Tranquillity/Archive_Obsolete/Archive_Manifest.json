@@ -1,0 +1,116 @@
+﻿[
+    {
+        "Name":  "Cover_Spread_From_Original_A5_299p.jpg",
+        "Bytes":  4282904,
+        "OriginalPath":  "C:\\Users\\ASUS\\Resyin Books\\Book_Production\\Cover_Spread_From_Original_A5_299p.jpg",
+        "ArchivePath":  "C:\\Users\\ASUS\\Resyin Books\\Book_Production\\Archive_Obsolete\\Cover_Spread_From_Original_A5_299p.jpg"
+    },
+    {
+        "Name":  "Hardcopy_and_Cover_Correction_Notes.md",
+        "Bytes":  1713,
+        "OriginalPath":  "C:\\Users\\ASUS\\Resyin Books\\Book_Production\\Hardcopy_and_Cover_Correction_Notes.md",
+        "ArchivePath":  "C:\\Users\\ASUS\\Resyin Books\\Book_Production\\Archive_Obsolete\\Hardcopy_and_Cover_Correction_Notes.md"
+    },
+    {
+        "Name":  "index_source_review.txt",
+        "Bytes":  449563,
+        "OriginalPath":  "C:\\Users\\ASUS\\Resyin Books\\Book_Production\\index_source_review.txt",
+        "ArchivePath":  "C:\\Users\\ASUS\\Resyin Books\\Book_Production\\Archive_Obsolete\\index_source_review.txt"
+    },
+    {
+        "Name":  "prepare_hardcopy_and_covers.py",
+        "Bytes":  14757,
+        "OriginalPath":  "C:\\Users\\ASUS\\Resyin Books\\Book_Production\\prepare_hardcopy_and_covers.py",
+        "ArchivePath":  "C:\\Users\\ASUS\\Resyin Books\\Book_Production\\Archive_Obsolete\\prepare_hardcopy_and_covers.py"
+    },
+    {
+        "Name":  "prepare_print_art.ps1",
+        "Bytes":  4614,
+        "OriginalPath":  "C:\\Users\\ASUS\\Resyin Books\\Book_Production\\prepare_print_art.ps1",
+        "ArchivePath":  "C:\\Users\\ASUS\\Resyin Books\\Book_Production\\Archive_Obsolete\\prepare_print_art.ps1"
+    },
+    {
+        "Name":  "Serenity_and_Tranquillity_Cover_Front.svg",
+        "Bytes":  2855,
+        "OriginalPath":  "C:\\Users\\ASUS\\Resyin Books\\Book_Production\\Serenity_and_Tranquillity_Cover_Front.svg",
+        "ArchivePath":  "C:\\Users\\ASUS\\Resyin Books\\Book_Production\\Archive_Obsolete\\Serenity_and_Tranquillity_Cover_Front.svg"
+    },
+    {
+        "Name":  "Serenity_and_Tranquillity_Digital_Readable.pdf",
+        "Bytes":  1542485,
+        "OriginalPath":  "C:\\Users\\ASUS\\Resyin Books\\Book_Production\\Serenity_and_Tranquillity_Digital_Readable.pdf",
+        "ArchivePath":  "C:\\Users\\ASUS\\Resyin Books\\Book_Production\\Archive_Obsolete\\Serenity_and_Tranquillity_Digital_Readable.pdf"
+    },
+    {
+        "Name":  "Serenity_and_Tranquillity_Digital_Readable_CoverCorrected.pdf",
+        "Bytes":  3658760,
+        "OriginalPath":  "C:\\Users\\ASUS\\Resyin Books\\Book_Production\\Serenity_and_Tranquillity_Digital_Readable_CoverCorrected.pdf",
+        "ArchivePath":  "C:\\Users\\ASUS\\Resyin Books\\Book_Production\\Archive_Obsolete\\Serenity_and_Tranquillity_Digital_Readable_CoverCorrected.pdf"
+    },
+    {
+        "Name":  "Serenity_and_Tranquillity_Hardcopy_A5_2up.pdf",
+        "Bytes":  1731350,
+        "OriginalPath":  "C:\\Users\\ASUS\\Resyin Books\\Book_Production\\Serenity_and_Tranquillity_Hardcopy_A5_2up.pdf",
+        "ArchivePath":  "C:\\Users\\ASUS\\Resyin Books\\Book_Production\\Archive_Obsolete\\Serenity_and_Tranquillity_Hardcopy_A5_2up.pdf"
+    },
+    {
+        "Name":  "Serenity_and_Tranquillity_Hardcopy_A5_2up_11pt_HeadCorrected.pdf",
+        "Bytes":  1748457,
+        "OriginalPath":  "C:\\Users\\ASUS\\Resyin Books\\Book_Production\\Serenity_and_Tranquillity_Hardcopy_A5_2up_11pt_HeadCorrected.pdf",
+        "ArchivePath":  "C:\\Users\\ASUS\\Resyin Books\\Book_Production\\Archive_Obsolete\\Serenity_and_Tranquillity_Hardcopy_A5_2up_11pt_HeadCorrected.pdf"
+    },
+    {
+        "Name":  "Serenity_and_Tranquillity_Hardcopy_A5_2up_LargerText.pdf",
+        "Bytes":  1723266,
+        "OriginalPath":  "C:\\Users\\ASUS\\Resyin Books\\Book_Production\\Serenity_and_Tranquillity_Hardcopy_A5_2up_LargerText.pdf",
+        "ArchivePath":  "C:\\Users\\ASUS\\Resyin Books\\Book_Production\\Archive_Obsolete\\Serenity_and_Tranquillity_Hardcopy_A5_2up_LargerText.pdf"
+    },
+    {
+        "Name":  "Serenity_and_Tranquillity_Interior_Edit.docx",
+        "Bytes":  150769,
+        "OriginalPath":  "C:\\Users\\ASUS\\Resyin Books\\Book_Production\\Serenity_and_Tranquillity_Interior_Edit.docx",
+        "ArchivePath":  "C:\\Users\\ASUS\\Resyin Books\\Book_Production\\Archive_Obsolete\\Serenity_and_Tranquillity_Interior_Edit.docx"
+    },
+    {
+        "Name":  "Serenity_and_Tranquillity_Print_Cover_A5_299p_Corrected.pdf",
+        "Bytes":  4283783,
+        "OriginalPath":  "C:\\Users\\ASUS\\Resyin Books\\Book_Production\\Serenity_and_Tranquillity_Print_Cover_A5_299p_Corrected.pdf",
+        "ArchivePath":  "C:\\Users\\ASUS\\Resyin Books\\Book_Production\\Archive_Obsolete\\Serenity_and_Tranquillity_Print_Cover_A5_299p_Corrected.pdf"
+    },
+    {
+        "Name":  "Serenity_and_Tranquillity_Print_Cover_A5_313p_LargerText.pdf",
+        "Bytes":  4283726,
+        "OriginalPath":  "C:\\Users\\ASUS\\Resyin Books\\Book_Production\\Serenity_and_Tranquillity_Print_Cover_A5_313p_LargerText.pdf",
+        "ArchivePath":  "C:\\Users\\ASUS\\Resyin Books\\Book_Production\\Archive_Obsolete\\Serenity_and_Tranquillity_Print_Cover_A5_313p_LargerText.pdf"
+    },
+    {
+        "Name":  "Serenity_and_Tranquillity_Print_Cover_A5_339p_11pt_HeadCorrected.pdf",
+        "Bytes":  4283714,
+        "OriginalPath":  "C:\\Users\\ASUS\\Resyin Books\\Book_Production\\Serenity_and_Tranquillity_Print_Cover_A5_339p_11pt_HeadCorrected.pdf",
+        "ArchivePath":  "C:\\Users\\ASUS\\Resyin Books\\Book_Production\\Archive_Obsolete\\Serenity_and_Tranquillity_Print_Cover_A5_339p_11pt_HeadCorrected.pdf"
+    },
+    {
+        "Name":  "Serenity_and_Tranquillity_Print_Interior.pdf",
+        "Bytes":  1694618,
+        "OriginalPath":  "C:\\Users\\ASUS\\Resyin Books\\Book_Production\\Serenity_and_Tranquillity_Print_Interior.pdf",
+        "ArchivePath":  "C:\\Users\\ASUS\\Resyin Books\\Book_Production\\Archive_Obsolete\\Serenity_and_Tranquillity_Print_Interior.pdf"
+    },
+    {
+        "Name":  "Serenity_and_Tranquillity_Print_Interior_A5_11pt_HeadCorrected.pdf",
+        "Bytes":  1706977,
+        "OriginalPath":  "C:\\Users\\ASUS\\Resyin Books\\Book_Production\\Serenity_and_Tranquillity_Print_Interior_A5_11pt_HeadCorrected.pdf",
+        "ArchivePath":  "C:\\Users\\ASUS\\Resyin Books\\Book_Production\\Archive_Obsolete\\Serenity_and_Tranquillity_Print_Interior_A5_11pt_HeadCorrected.pdf"
+    },
+    {
+        "Name":  "Serenity_and_Tranquillity_Print_Interior_A5_LargerText.pdf",
+        "Bytes":  1684969,
+        "OriginalPath":  "C:\\Users\\ASUS\\Resyin Books\\Book_Production\\Serenity_and_Tranquillity_Print_Interior_A5_LargerText.pdf",
+        "ArchivePath":  "C:\\Users\\ASUS\\Resyin Books\\Book_Production\\Archive_Obsolete\\Serenity_and_Tranquillity_Print_Interior_A5_LargerText.pdf"
+    },
+    {
+        "Name":  "Serenity_and_Tranquillity_Print_Interior_A5_Single.pdf",
+        "Bytes":  1765024,
+        "OriginalPath":  "C:\\Users\\ASUS\\Resyin Books\\Book_Production\\Serenity_and_Tranquillity_Print_Interior_A5_Single.pdf",
+        "ArchivePath":  "C:\\Users\\ASUS\\Resyin Books\\Book_Production\\Archive_Obsolete\\Serenity_and_Tranquillity_Print_Interior_A5_Single.pdf"
+    }
+]
