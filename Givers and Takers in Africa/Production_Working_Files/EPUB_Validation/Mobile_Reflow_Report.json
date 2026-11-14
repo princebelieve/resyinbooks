@@ -1,0 +1,113 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "file": "chapter-01.xhtml",
+      "viewport": 320,
+      "rootFont": 16,
+      "width": 320,
+      "scroll": 320,
+      "font": "12px",
+      "title": "file:///C:/Users/ASUS/Resyin%20Books/Givers%20and%20Takers%20in%20Africa/EPUB_Preview/chapter-01.xhtml"
+    },
+    {
+      "file": "chapter-01.xhtml",
+      "viewport": 390,
+      "rootFont": 16,
+      "width": 390,
+      "scroll": 390,
+      "font": "12px",
+      "title": "file:///C:/Users/ASUS/Resyin%20Books/Givers%20and%20Takers%20in%20Africa/EPUB_Preview/chapter-01.xhtml"
+    },
+    {
+      "file": "chapter-01.xhtml",
+      "viewport": 390,
+      "rootFont": 32,
+      "width": 390,
+      "scroll": 390,
+      "font": "24px",
+      "title": "file:///C:/Users/ASUS/Resyin%20Books/Givers%20and%20Takers%20in%20Africa/EPUB_Preview/chapter-01.xhtml"
+    },
+    {
+      "file": "chapter-01.xhtml",
+      "viewport": 768,
+      "rootFont": 16,
+      "width": 768,
+      "scroll": 768,
+      "font": "12px",
+      "title": "file:///C:/Users/ASUS/Resyin%20Books/Givers%20and%20Takers%20in%20Africa/EPUB_Preview/chapter-01.xhtml"
+    },
+    {
+      "file": "subject-index.xhtml",
+      "viewport": 320,
+      "rootFont": 16,
+      "width": 320,
+      "scroll": 320,
+      "font": "12px",
+      "title": "file:///C:/Users/ASUS/Resyin%20Books/Givers%20and%20Takers%20in%20Africa/EPUB_Preview/subject-index.xhtml"
+    },
+    {
+      "file": "subject-index.xhtml",
+      "viewport": 390,
+      "rootFont": 16,
+      "width": 390,
+      "scroll": 390,
+      "font": "12px",
+      "title": "file:///C:/Users/ASUS/Resyin%20Books/Givers%20and%20Takers%20in%20Africa/EPUB_Preview/subject-index.xhtml"
+    },
+    {
+      "file": "subject-index.xhtml",
+      "viewport": 390,
+      "rootFont": 32,
+      "width": 390,
+      "scroll": 390,
+      "font": "24px",
+      "title": "file:///C:/Users/ASUS/Resyin%20Books/Givers%20and%20Takers%20in%20Africa/EPUB_Preview/subject-index.xhtml"
+    },
+    {
+      "file": "subject-index.xhtml",
+      "viewport": 768,
+      "rootFont": 16,
+      "width": 768,
+      "scroll": 768,
+      "font": "12px",
+      "title": "file:///C:/Users/ASUS/Resyin%20Books/Givers%20and%20Takers%20in%20Africa/EPUB_Preview/subject-index.xhtml"
+    },
+    {
+      "file": "nav.xhtml",
+      "viewport": 320,
+      "rootFont": 16,
+      "width": 320,
+      "scroll": 320,
+      "font": "12px",
+      "title": "file:///C:/Users/ASUS/Resyin%20Books/Givers%20and%20Takers%20in%20Africa/EPUB_Preview/nav.xhtml"
+    },
+    {
+      "file": "nav.xhtml",
+      "viewport": 390,
+      "rootFont": 16,
+      "width": 390,
+      "scroll": 390,
+      "font": "12px",
+      "title": "file:///C:/Users/ASUS/Resyin%20Books/Givers%20and%20Takers%20in%20Africa/EPUB_Preview/nav.xhtml"
+    },
+    {
+      "file": "nav.xhtml",
+      "viewport": 390,
+      "rootFont": 32,
+      "width": 390,
+      "scroll": 390,
+      "font": "24px",
+      "title": "file:///C:/Users/ASUS/Resyin%20Books/Givers%20and%20Takers%20in%20Africa/EPUB_Preview/nav.xhtml"
+    },
+    {
+      "file": "nav.xhtml",
+      "viewport": 768,
+      "rootFont": 16,
+      "width": 768,
+      "scroll": 768,
+      "font": "12px",
+      "title": "file:///C:/Users/ASUS/Resyin%20Books/Givers%20and%20Takers%20in%20Africa/EPUB_Preview/nav.xhtml"
+    }
+  ]
+}

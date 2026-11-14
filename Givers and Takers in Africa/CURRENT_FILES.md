@@ -1,18 +1,15 @@
-# Current files for *Givers and Takers in Africa*
+# Current book files for *Givers and Takers in Africa*
 
-Use the indexed/current files below for reading and review. Inputs and the first editable assembly remain separate and unchanged; see `Source_Materials/README.md` and `Working_Manuscript/Editorial_Change_Log.md` for boundaries and corrections.
+The finished, usable editions are kept in this folder. Source files, assembly masters, build tools, validation reports and previews are preserved in [Production_Working_Files](Production_Working_Files/README.md), following the layout used for *Serenity and Tranquillity*.
 
 | File | Use |
 | --- | --- |
-| [Indexed reflowable EPUB](Working_Manuscript/Givers_and_Takers_in_Africa.epub) | Phone, tablet and e-reader edition with cropped cover, linked contents, a 49-entry subject index and selective related-topic links. EPUBCheck: zero errors or warnings; 12 mobile reflow checks passed. |
-| [Digital A4 PDF](Production/Givers_and_Takers_in_Africa_Digital_Readable_Indexed.pdf) | Screen reading, 114 pages; linked contents and index, 41 related-topic links and 77 return-to-index controls. |
-| [A5 print interior PDF](Production/Givers_and_Takers_in_Africa_Print_Interior_A5_Indexed.pdf) | 166-page single-page print interior with an edition-specific, linked subject index. |
-| [A5 two-up PDF](Production/Givers_and_Takers_in_Africa_Hardcopy_A5_2up_Indexed.pdf) | 83 landscape spreads; use when a printer requests two A5 pages side by side. Internal links are retained. |
-| [Indexed editable Word copy](Production/Givers_and_Takers_in_Africa_Manuscript_Edit_Indexed.docx) | Editorial master with hidden XE markers for a native Word index field. Open in Word, select all and press F9 to populate its page references after the Word layout is set. |
-| [Base editable Word master](Working_Manuscript/Givers_and_Takers_in_Africa_Manuscript_Edit.docx) | Unindexed 6 × 9 in editorial master; preserved separately from print and digital derivatives. |
-| [Front cover image](Production/Cover_Front_OnlineStore.jpg) | Cropped front panel for digital retailers and EPUB; the source full-wrap image remains in `Source_Materials`. |
-| [A5 166-page full-wrap cover proof (PDF)](Production/Cover_Spread_A5_166p_Cream_Assumption.pdf) | Rebuilt front/back/spine using the 166-page count and the same cream-paper spine assumption as the reference workflow. The supplied ISBN/barcode was retained. This is a proof pending confirmation of the actual printer's paper/binding template. |
+| [Reflowable EPUB](Givers_and_Takers_in_Africa.epub) | Phone, tablet and e-reader edition; validated with EPUBCheck. No separate digital ISBN was supplied. |
+| [Digital reading PDF](Givers_and_Takers_in_Africa_Digital_Readable_Indexed.pdf) | A4 screen-reading PDF with linked contents and subject index. |
+| [A5 print interior](Givers_and_Takers_in_Africa_Print_Interior_A5_Indexed.pdf) | 167-page print interior with ISBN `978-978-59760-5-2` in plain text on the copyright page. |
+| [A5 two-up print file](Givers_and_Takers_in_Africa_Hardcopy_A5_2up_Indexed.pdf) | 84 landscape spreads for printers requesting two-up pages; print ISBN and internal links are retained. |
+| [Editable Word manuscript](Givers_and_Takers_in_Africa_Manuscript_Edit_Indexed.docx) | Editable manuscript with native Word index markers and print copyright-page ISBN. In Word, select all and press F9 to populate index page references. |
+| [Digital front cover](Givers_and_Takers_in_Africa_Cover_Front.jpg) | Front-cover image for ebook stores and digital listings. |
+| [A5 full-wrap cover proof](Givers_and_Takers_in_Africa_Cover_Spread_A5_167p_Cream_Proof.pdf) | Rebuilt from the supplied artwork and sized for the 167-page interior under a cream-paper assumption. Confirm the printer's paper and template before printing. |
 
-The interior contains no ISBN. The supplied back-cover artwork already shows ISBN 978-978-59760-5-2; it was retained in the rebuilt wrap and was not added to the interior or EPUB metadata. Its publisher/distributor assignment should be confirmed before submission. The print-wrap proof assumes cream paper; request the final spine template from the actual printer before printing.
-
-See [Production Notes](Production_Notes.md), [EPUB validation and production notes](Production/EPUB_Validation/Production_Notes.md), and [Subject Index Notes](Production/Subject_Index_Notes.md).
+The print ISBN also appears as a barcode on the supplied back cover. The digital PDF and EPUB have the copyright notice but omit the print ISBN because no separate digital-edition ISBN was supplied. Confirm the print ISBN's assignment before publication.
