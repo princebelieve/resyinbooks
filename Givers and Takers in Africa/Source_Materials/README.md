@@ -19,7 +19,7 @@ The proposed contents list is a planning aid for the book's chapter titles. The 
 | `Chapters_9-13.txt` | Supplied Chapters 9-13. |
 | `Chapters_14-15.txt` | Supplied Chapters 14-15. |
 | `Back_Matter.txt` | Conclusion, recommendations, charter, practical guide, glossary, discussion questions, bibliography, author note, and final message. |
-| `Givers and Takers Book Cover.jpeg` | Supplied full-wrap cover reference. |
+| `Givers and Takers Book Cover.jpeg` | Supplied full-wrap cover artwork, retained unchanged. A print-cover working proof using its front/back artwork is in `../Production/Cover_Spread_A5_166p_Cream_Assumption.pdf`; it assumes cream paper and still needs the printer's template/paper specification. |
 
 The received chapter files cover the proposed fifteen chapters in sequence. Raw sources have not been silently corrected or restructured.
 
@@ -30,5 +30,6 @@ The received chapter files cover the proposed fifteen chapters in sequence. Raw 
 - The brief's research-foundations paragraph contains an incomplete Chatham House 2025 reference and a stray replacement character. It is brief material, not a manuscript passage; treat it only as a lead if the author wants that research used.
 - The brief names theoretical authors and traditions, and the back matter includes a selected bibliography. Check that works are fully identified and support the associated discussion; do not invent missing publication details.
 - The cover and manuscript agree on title, author, and publisher. The cover shows ISBN `978-978-59760-5-2`; its checksum is valid, but verify that it is assigned to this edition before production metadata is finalized.
+- The supplied wrap's spine was too wide for the current 166-page A5 interior. A proportionally rebuilt proof is documented in `../Production/Print_Cover_Audit.json`; its ISBN artwork comes from the supplied cover and was not added to the interior or EPUB.
 
 These are review notes, not edits to Prof's original text.

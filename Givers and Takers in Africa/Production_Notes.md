@@ -17,9 +17,13 @@ The subject index is an editorial first pass that should be reviewed for preferr
 
 ## Source and cover handling
 
-`Source_Materials` contains the original supplied files unchanged. The source parser assembles the fifteen manuscript chapters and marked back matter, excludes proposal/brief directions and production notes, applies only documented working-copy repairs, and retains all numbered headings. The original wrap is preserved. `Cover_Front_OnlineStore.jpg` is a digital front-panel crop from the provided wrap, following the same crop workflow documented in the previous book. It is not a new print wrap.
+`Source_Materials` contains the original supplied files unchanged. The source parser assembles the fifteen manuscript chapters and marked back matter, excludes proposal/brief directions and production notes, applies only documented working-copy repairs, and retains all numbered headings. `Cover_Front_OnlineStore.jpg` is the digital front-panel crop from the supplied wrap, produced with the same crop workflow used by the previous book.
 
-The existing cover ISBN passes its checksum, but its assignment to this edition is unconfirmed. It has not been added to EPUB metadata. The print-wrap spine remains uncalculated until the final page count and printer paper specification are known.
+The original full wrap was not suitable for this interior. Its spine occupied about 140 pixels against a 600-pixel front panel; at A5 that represents about 1.36 inches. For the 166-page interior, the cream-paper assumption retained from the prior workflow gives a spine of 0.415 inches. I rebuilt the existing back/front artwork as equal A5 panels, placed the supplied ISBN/barcode on the back and typeset a narrow green/gold spine. The output is a [cover proof](Production/Cover_Spread_A5_166p_Cream_Assumption.pdf), with [dimensions and assumptions recorded](Production/Print_Cover_Audit.json).
+
+The proof follows the prior book's cream-paper coefficient, 0.0025 inches per page. KDP's published cover guidance uses that coefficient for cream paper and requires 0.125-inch bleed; other paper and binding specifications can produce a different spine/template. The proof therefore needs the actual printer's template and paper confirmation before submission. [KDP paperback cover specifications](https://kdp.amazon.com/en_US/help/topic/G201857950) and [cover calculator](https://kdp.amazon.com/cover-templates).
+
+The supplied wrap already prints ISBN `978-978-59760-5-2`. I preserved it in the print-cover proof; I did not add it to the interior text or EPUB metadata. Confirm its publisher/distributor assignment before publication.
 
 ## Rebuild sequence
 
@@ -29,5 +33,6 @@ The existing cover ISBN passes its checksum, but its assignment to this edition 
 4. `python build_indexed_docx.py` creates a separate editable copy with native Word index markers.
 5. `python build_epub.py` creates the reflowable EPUB from source text and the same index configuration.
 6. `python validate_epub.py` extracts a review tree and checks EPUB resource/fragment targets. `node check_epub_mobile.mjs` records the responsive preview checks. EPUBCheck 5.4.0 reports are in `Production/EPUB_Validation`.
+7. `prepare_print_cover.ps1` rebuilds the A5 wrap proof; `python build_print_cover_pdf.py` wraps it in a dimensioned PDF and refreshes the cover audit.
 
 Base PDFs and intermediate HTML are retained in `Production` to make each stage reproducible. Use the `*_Indexed.pdf` editions listed in `CURRENT_FILES.md` for review.

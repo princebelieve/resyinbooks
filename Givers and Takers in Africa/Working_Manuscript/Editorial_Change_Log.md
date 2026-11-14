@@ -26,6 +26,8 @@ See [Bibliography_Audit.md](Bibliography_Audit.md) for the detailed reference re
 
 See [Reference_Workflow_Comparison.md](Reference_Workflow_Comparison.md) for a deliverable-by-deliverable comparison with *Serenity and Tranquillity*. The production package now includes separate editable, indexed, print, digital, two-up and EPUB outputs, with validation reports and previews. The comparison note records the remaining review work.
 
+See [Content_Preservation_Audit.md](Content_Preservation_Audit.md) for the line-by-line preservation check: all 1,892 chapter lines and 158 section headings matched the assembly source, with the identified citation repair applied. Back matter is documented against the agreed transformations.
+
 The reflowable EPUB at `Givers_and_Takers_in_Africa.epub` retains all 15 chapters and 158 numbered sections, includes a front-only cover derivative, linked contents, the shared 49-entry section-based subject index and selective topic links, and passes EPUBCheck 5.4.0 with zero errors or warnings. The A5 print, A4 digital and two-up PDFs and indexed Word copy are listed in the project-level `CURRENT_FILES.md`.
 
 ## Editorial and production review still needed
@@ -33,5 +35,5 @@ The reflowable EPUB at `Givers_and_Takers_in_Africa.epub` retains all 15 chapter
 - Complete and verify the bibliography. It includes repeated items and generic placeholders such as "Various years" and "selected publications"; do not invent missing publication details.
 - Verify the author biography and any specific institutional or career claims with Prof.
 - Review factual claims, terminology, citation placement, and repeated explanations across chapters. Preserve source passages unless a correction is justified and recorded.
-- Confirm that the cover ISBN is assigned to this edition before using it in publication metadata. Its checksum is valid, but assignment has not been verified.
-- Set final print trim and cover dimensions after the interior layout is reviewed. The supplied image is retained as a visual reference, not assumed to be a printer-ready wrap for the new page count.
+- The supplied back cover already contains ISBN `978-978-59760-5-2`. It is preserved on the wrap proof and was not added to the interior or EPUB metadata. Confirm its publisher/distributor assignment before publication.
+- Confirm the print vendor's paper/binding template. The new 166-page A5 wrap is a working proof based on the cream-paper assumption from the reference workflow, not a printer-approved final.

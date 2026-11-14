@@ -18,23 +18,24 @@ The current deliverables listed in `Serenity and Tranquillity/CURRENT_FILES.md` 
 | Reflowable ebook | EPUB 3 with cover, navigation, index and related-topic links | EPUB 3 with cropped cover, linked contents, same 49-entry index and selective related-topic links; EPUBCheck clean |
 | Subject index | 266 topic/subtopic entries plus cross-references; linked in PDF and EPUB | 49 editorial topic/subtopic entries and four See references; section-mapped in PDF/EPUB, with native Word XE/INDEX fields |
 | Validation and previews | EPUBCheck, mobile reflow, link audit and preview images | EPUBCheck: zero errors/warnings; 12 mobile reflow checks pass; no missing EPUB targets; PDF destinations in range; cover, print, index and EPUB previews saved |
-| Cover | Separate front-cover image; full wrap deferred until printer/page-count specs | 1800 × 2559 front-only digital derivative created from supplied wrap; original kept; print spine remains deferred until printer/page-count specs |
+| Cover | Front-only digital image; prior full wrap archived because its spine no longer matched 345-page interior | 1800 × 2559 digital front crop plus a rebuilt A5, 166-page wrap proof with a 0.415 in cream-paper-assumption spine; original art/ISBN preserved; vendor template still needed |
 
 ## Master versus delivery sizes
 
-The reference separates the 6 x 9 in editable Word master from the A5 print PDF. This manuscript's Word master is now set to 6 x 9 in; the A5 interior remains a later output. The cover ISBN shown in the supplied image has a valid checksum, but its assignment to this edition is unconfirmed, so it is not entered as confirmed publication metadata.
+The reference separates the 6 x 9 in editable Word master from the A5 print PDF. This manuscript's Word master is set to 6 x 9 in. The supplied cover already displays ISBN 978-978-59760-5-2; that ISBN was retained on the reconstructed back cover and not added to the interior or EPUB metadata. Confirm its assignment before publication.
 
 ## Boundary and correction policy
 
 Only manuscript content within the marked source boundaries is assembled. The author brief and embedded production directions are treated as guidance, not book chapters. Source files stay unchanged. Documented working-copy repairs are limited to the damaged Afrobarometer citation and duplicate bibliography entries; the audit records unresolved references and claims for review. Chapter and section numbering is not being rewritten as part of layout.
 
-## Next production sequence
+## Text preservation check
 
-1. Review the 6 x 9 editable master and settle editorial queries without silently rewriting Prof's argument.
-2. Create a cropped front-cover image for digital use while preserving the supplied full-wrap source.
-3. Review and expand the EPUB's starter subject index and add selective related-topic links.
-4. Generate print and digital PDFs from the approved master, then create edition-specific subject index locators and links.
-5. Validate the ebook's mobile reflow and PDF navigation/page counts; produce previews and two-up file.
-6. Calculate a new print wrap only when page count and printer paper/caliper specifications are known.
+The content check in [Content_Preservation_Audit.md](Content_Preservation_Audit.md) matched all 1,892 chapter lines and 158 numbered headings to the assembly source after the single damaged-citation repair. The 375 editable back-matter lines/cells match the documented assembly decisions. No chapter was rewritten, merged or renumbered.
 
-The production package now follows the same major stages as the reference, while keeping Prof's fifteen chapters and 158 numbered headings intact. It is still a review edition: the index is a first editorial pass, bibliography and factual queries remain open, and the full print wrap needs the chosen printer's template and paper specification. See [CURRENT_FILES.md](../CURRENT_FILES.md) for the usable outputs and [Production_Notes.md](../Production_Notes.md) for rebuild instructions.
+## Remaining review
+
+1. Review the 6 x 9 editable master, bibliography queries and first-pass subject index with Prof.
+2. Confirm the ISBN's assignment and the printer's paper, binding, trim and cover template.
+3. Recalculate/regenerate the cover from that printer template if its measurements differ from the cream-paper proof.
+
+The production package now follows the same major stages as the reference, while keeping Prof's fifteen chapters and 158 numbered headings intact. It is a review edition: the index is a first editorial pass, bibliography and factual queries remain open, and the print-cover proof needs the chosen printer's template and paper specification. See [CURRENT_FILES.md](../CURRENT_FILES.md) for usable outputs and [Production_Notes.md](../Production_Notes.md) for rebuild instructions.
