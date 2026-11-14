@@ -91,6 +91,19 @@ def collect_backmatter() -> list[str]:
     body = lines(text[start.end():end.start()])
     # This sentence is an editorial instruction embedded in the supplied source, not book prose.
     body = [line for line in body if not line.startswith("The following works provide theoretical and empirical foundations")]
+    # Remove repeated identical entries from the editable copy; originals remain untouched.
+    seen_references: set[str] = set()
+    deduplicated = []
+    for line in body:
+        if line in {
+            "Sen, A. (1999). Development as Freedom. Oxford University Press.",
+            "North, D. C. (1990). Institutions, Institutional Change and Economic Performance. Cambridge University Press.",
+        }:
+            if line in seen_references:
+                continue
+            seen_references.add(line)
+        deduplicated.append(line)
+    body = deduplicated
     # Add the complete source for the statistic retained in Chapter One.
     anchor = "D. Africa and Nigerian Development"
     if anchor not in body:
@@ -114,6 +127,41 @@ def paragraph(text: str, style: str = "Normal", *, page_break: bool = False) -> 
         ppr.append("<w:pageBreakBefore/>")
     run = f'<w:r><w:t xml:space="preserve">{xml(text)}</w:t></w:r>' if text else ""
     return f'<w:p><w:pPr>{"".join(ppr)}</w:pPr>{run}</w:p>'
+
+
+def recommendations_table(rows: list[list[str]]) -> str:
+    widths = [420, 1250, 2680, 1881]
+    borders = (
+        '<w:tblBorders><w:top w:val="single" w:sz="6" w:color="A9B8B2"/>'
+        '<w:left w:val="single" w:sz="4" w:color="D6DDD9"/>'
+        '<w:bottom w:val="single" w:sz="6" w:color="A9B8B2"/>'
+        '<w:right w:val="single" w:sz="4" w:color="D6DDD9"/>'
+        '<w:insideH w:val="single" w:sz="4" w:color="D6DDD9"/>'
+        '<w:insideV w:val="single" w:sz="4" w:color="D6DDD9"/></w:tblBorders>'
+    )
+    table = (
+        '<w:tbl><w:tblPr><w:tblW w:w="6231" w:type="dxa"/><w:tblLayout w:type="fixed"/>'
+        + borders
+        + '</w:tblPr><w:tblGrid>'
+        + ''.join(f'<w:gridCol w:w="{width}"/>' for width in widths)
+        + '</w:tblGrid>'
+    )
+    for row_index, row in enumerate(rows):
+        table += '<w:tr><w:trPr><w:cantSplit/>'
+        if row_index == 0:
+            table += '<w:tblHeader/>'
+        table += '</w:trPr>'
+        for cell_index, value in enumerate(row):
+            shade = '<w:shd w:fill="EAF0ED"/>' if row_index == 0 else ''
+            bold = '<w:b/>' if row_index == 0 else ''
+            table += (
+                f'<w:tc><w:tcPr><w:tcW w:w="{widths[cell_index]}" w:type="dxa"/>{shade}</w:tcPr>'
+                f'<w:p><w:pPr><w:spacing w:after="60" w:line="240" w:lineRule="auto"/></w:pPr>'
+                f'<w:r><w:rPr><w:rFonts w:ascii="Georgia" w:hAnsi="Georgia"/><w:sz w:val="18"/>{bold}</w:rPr>'
+                f'<w:t xml:space="preserve">{xml(value)}</w:t></w:r></w:p></w:tc>'
+            )
+        table += '</w:tr>'
+    return table + '</w:tbl>'
 
 
 def field_paragraph(instruction: str, fallback: str) -> str:
@@ -140,7 +188,7 @@ def build_docx(chapters: list[tuple[int, str, str, list[str]]], backmatter: list
         paragraph(AUTHOR, "AuthorLine"),
         paragraph(PUBLISHER, "PublisherLine"),
         paragraph("TABLE OF CONTENTS", "FrontHead", page_break=True),
-        field_paragraph('TOC \\o "1-1" \\h \\z \\u', "Open in Word and update this field to populate the contents."),
+        field_paragraph('TOC \\o "1-1" \\t "FrontHead,1" \\h \\z \\u', "Open in Word and update this field to populate the contents."),
     ]
     for number, chapter_label, title, body in chapters:
         doc_paras.append(paragraph(chapter_label, "ChapterLabel", page_break=True))
@@ -151,9 +199,20 @@ def build_docx(chapters: list[tuple[int, str, str, list[str]]], backmatter: list
                 style = "Lesson"
             doc_paras.append(paragraph(text, style))
     doc_paras.append(paragraph("BACK MATTER", "FrontHead", page_break=True))
-    for text in backmatter:
+    index = 0
+    while index < len(backmatter):
+        text = backmatter[index]
+        if text == "No.":
+            table_lines = backmatter[index:index + 64]
+            if len(table_lines) != 64 or table_lines[:4] != ["No.", "Policy Area", "Recommended Action", "Expected Outcome"]:
+                raise ValueError("Policy recommendation table does not contain the expected 15 complete rows")
+            cells = [table_lines[:4]]
+            cells.extend([table_lines[pos:pos + 4] for pos in range(4, 64, 4)])
+            doc_paras.append(recommendations_table(cells))
+            index += 64
+            continue
         if TOP_BACK_RE.match(text):
-            style = "Heading1"
+            style = "FrontHead"
         elif SECTION_RE.match(text) or re.match(r"^(?:[A-H]\.\s|Article \d+:|Preamble$|The Charter's Guiding Principle:)", text):
             style = "Heading2"
         elif re.match(r"^[A-Z][A-Za-z'’ -]+:\s", text):
@@ -161,6 +220,7 @@ def build_docx(chapters: list[tuple[int, str, str, list[str]]], backmatter: list
         else:
             style = "Normal"
         doc_paras.append(paragraph(text, style))
+        index += 1
 
     W = "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
     R = "http://schemas.openxmlformats.org/officeDocument/2006/relationships"
@@ -168,7 +228,7 @@ def build_docx(chapters: list[tuple[int, str, str, list[str]]], backmatter: list
     sect = (
         '<w:sectPr><w:headerReference w:type="default" r:id="rId2"/>'
         '<w:footerReference w:type="default" r:id="rId3"/>'
-        '<w:pgSz w:w="8391" w:h="11906"/>'
+        '<w:pgSz w:w="8640" w:h="12960"/>'
         '<w:pgMar w:top="1080" w:right="900" w:bottom="1080" w:left="1080" w:header="480" w:footer="480" w:gutter="180"/>'
         '</w:sectPr>'
     )
@@ -180,9 +240,9 @@ def build_docx(chapters: list[tuple[int, str, str, list[str]]], backmatter: list
     <w:styles xmlns:w="{W}">
       <w:docDefaults><w:rPrDefault><w:rPr><w:rFonts w:ascii="Georgia" w:hAnsi="Georgia" w:eastAsia="Georgia"/><w:lang w:val="en-GB"/><w:sz w:val="22"/></w:rPr></w:rPrDefault><w:pPrDefault><w:pPr><w:spacing w:after="120" w:line="300" w:lineRule="auto"/></w:pPr></w:pPrDefault></w:docDefaults>
       <w:style w:type="paragraph" w:default="1" w:styleId="Normal"><w:name w:val="Normal"/><w:rPr><w:rFonts w:ascii="Georgia" w:hAnsi="Georgia"/><w:sz w:val="22"/></w:rPr><w:pPr><w:jc w:val="both"/><w:widowControl/></w:pPr></w:style>
-      <w:style w:type="paragraph" w:styleId="Heading1"><w:name w:val="heading 1"/><w:basedOn w:val="Normal"/><w:next w:val="Normal"/><w:qFormat/><w:pPr><w:keepNext/><w:keepLines/><w:spacing w:before="420" w:after="220"/><w:outlineLvl w:val="0"/><w:jc w:val="center"/></w:pPr><w:rPr><w:rFonts w:ascii="Georgia" w:hAnsi="Georgia"/><w:b/><w:color w:val="173F35"/><w:sz w:val="30"/></w:rPr></w:style>
+      <w:style w:type="paragraph" w:styleId="Heading1"><w:name w:val="heading 1"/><w:basedOn w:val="Normal"/><w:next w:val="Normal"/><w:qFormat/><w:pPr><w:keepNext/><w:keepLines/><w:spacing w:before="420" w:after="220"/><w:outlineLvl w:val="0"/><w:jc w:val="center"/></w:pPr><w:rPr><w:rFonts w:ascii="Georgia" w:hAnsi="Georgia"/><w:b/><w:color w:val="173F35"/><w:sz w:val="32"/></w:rPr></w:style>
       <w:style w:type="paragraph" w:styleId="Heading2"><w:name w:val="heading 2"/><w:basedOn w:val="Normal"/><w:next w:val="Normal"/><w:qFormat/><w:pPr><w:keepNext/><w:spacing w:before="220" w:after="100"/><w:outlineLvl w:val="1"/></w:pPr><w:rPr><w:rFonts w:ascii="Georgia" w:hAnsi="Georgia"/><w:b/><w:color w:val="173F35"/><w:sz w:val="24"/></w:rPr></w:style>
-      <w:style w:type="paragraph" w:styleId="BookTitle"><w:name w:val="Book Title"/><w:basedOn w:val="Normal"/><w:pPr><w:jc w:val="center"/><w:spacing w:before="2100" w:after="500"/></w:pPr><w:rPr><w:rFonts w:ascii="Georgia" w:hAnsi="Georgia"/><w:b/><w:sz w:val="52"/><w:color w:val="0B1A3A"/></w:rPr></w:style>
+      <w:style w:type="paragraph" w:styleId="BookTitle"><w:name w:val="Book Title"/><w:basedOn w:val="Normal"/><w:pPr><w:jc w:val="center"/><w:spacing w:before="2100" w:after="500"/></w:pPr><w:rPr><w:rFonts w:ascii="Georgia" w:hAnsi="Georgia"/><w:b/><w:sz w:val="56"/><w:color w:val="0B1A3A"/></w:rPr></w:style>
       <w:style w:type="paragraph" w:styleId="BookSubtitle"><w:name w:val="Book Subtitle"/><w:basedOn w:val="Normal"/><w:pPr><w:jc w:val="center"/><w:spacing w:after="600"/></w:pPr><w:rPr><w:rFonts w:ascii="Georgia" w:hAnsi="Georgia"/><w:sz w:val="24"/><w:color w:val="173F35"/></w:rPr></w:style>
       <w:style w:type="paragraph" w:styleId="AuthorLine"><w:name w:val="Author Line"/><w:basedOn w:val="Normal"/><w:pPr><w:jc w:val="center"/><w:spacing w:before="400"/></w:pPr><w:rPr><w:b/><w:sz w:val="26"/></w:rPr></w:style>
       <w:style w:type="paragraph" w:styleId="PublisherLine"><w:name w:val="Publisher Line"/><w:basedOn w:val="Normal"/><w:pPr><w:jc w:val="center"/><w:spacing w:before="180"/></w:pPr><w:rPr><w:sz w:val="22"/></w:rPr></w:style>

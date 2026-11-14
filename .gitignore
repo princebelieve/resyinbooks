@@ -5,7 +5,13 @@ _chrome_profile/
 **/.python_libs/
 **/.tools/
 **/__pycache__/
+**/.edge-profile-*/
+**/EPUB_Preview/
 *.py[cod]
+
+# Duplicate preview/check outputs from the initial EPUB validation pass
+Givers and Takers in Africa/Previews/
+Givers and Takers in Africa/EPUB_Validation/
 
 # Common editor and operating-system files
 .vscode/

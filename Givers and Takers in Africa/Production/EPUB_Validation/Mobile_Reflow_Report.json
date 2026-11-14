@@ -1,0 +1,125 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "file": "chapter-01.xhtml",
+      "viewport": 320,
+      "rootFont": 16,
+      "width": 320,
+      "scroll": 320,
+      "font": "16px",
+      "title": "UNDERSTANDING GIVERS AND TAKERS: THE FOUNDATIONS OF HUMAN BEHAVIOUR",
+      "overflow": []
+    },
+    {
+      "file": "chapter-01.xhtml",
+      "viewport": 390,
+      "rootFont": 16,
+      "width": 390,
+      "scroll": 390,
+      "font": "16px",
+      "title": "UNDERSTANDING GIVERS AND TAKERS: THE FOUNDATIONS OF HUMAN BEHAVIOUR",
+      "overflow": []
+    },
+    {
+      "file": "chapter-01.xhtml",
+      "viewport": 390,
+      "rootFont": 32,
+      "width": 390,
+      "scroll": 390,
+      "font": "16px",
+      "title": "UNDERSTANDING GIVERS AND TAKERS: THE FOUNDATIONS OF HUMAN BEHAVIOUR",
+      "overflow": []
+    },
+    {
+      "file": "chapter-01.xhtml",
+      "viewport": 768,
+      "rootFont": 16,
+      "width": 768,
+      "scroll": 768,
+      "font": "16px",
+      "title": "UNDERSTANDING GIVERS AND TAKERS: THE FOUNDATIONS OF HUMAN BEHAVIOUR",
+      "overflow": []
+    },
+    {
+      "file": "subject-index.xhtml",
+      "viewport": 320,
+      "rootFont": 16,
+      "width": 320,
+      "scroll": 320,
+      "font": "16px",
+      "title": "Subject Index",
+      "overflow": []
+    },
+    {
+      "file": "subject-index.xhtml",
+      "viewport": 390,
+      "rootFont": 16,
+      "width": 390,
+      "scroll": 390,
+      "font": "16px",
+      "title": "Subject Index",
+      "overflow": []
+    },
+    {
+      "file": "subject-index.xhtml",
+      "viewport": 390,
+      "rootFont": 32,
+      "width": 390,
+      "scroll": 390,
+      "font": "16px",
+      "title": "Subject Index",
+      "overflow": []
+    },
+    {
+      "file": "subject-index.xhtml",
+      "viewport": 768,
+      "rootFont": 16,
+      "width": 768,
+      "scroll": 768,
+      "font": "16px",
+      "title": "Subject Index",
+      "overflow": []
+    },
+    {
+      "file": "nav.xhtml",
+      "viewport": 320,
+      "rootFont": 16,
+      "width": 320,
+      "scroll": 320,
+      "font": "16px",
+      "title": "Contents",
+      "overflow": []
+    },
+    {
+      "file": "nav.xhtml",
+      "viewport": 390,
+      "rootFont": 16,
+      "width": 390,
+      "scroll": 390,
+      "font": "16px",
+      "title": "Contents",
+      "overflow": []
+    },
+    {
+      "file": "nav.xhtml",
+      "viewport": 390,
+      "rootFont": 32,
+      "width": 390,
+      "scroll": 390,
+      "font": "16px",
+      "title": "Contents",
+      "overflow": []
+    },
+    {
+      "file": "nav.xhtml",
+      "viewport": 768,
+      "rootFont": 16,
+      "width": 768,
+      "scroll": 768,
+      "font": "16px",
+      "title": "Contents",
+      "overflow": []
+    }
+  ]
+}
